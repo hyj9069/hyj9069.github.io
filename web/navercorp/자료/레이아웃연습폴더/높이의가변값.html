@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>높이의가변값</title>
+  <style>
+    .img{border: 2px solid red;}
+    .box1{width: 700px; border: 2px solid blue;}
+    .box1 img{width: 100%;}
+    .box2{width: 50%; border: 1px solid yellow;}
+    .box2 img{width: 100%;}
+    /* 
+    블럭요소의 height값은 
+    - 포함한 자손의 면적에 비례
+    - height의 %값이 적용이 되려면 블럭의 부모 요소에 고정된 높이 값이 필요
+    */
+    .box3{background: url(/navercorp/img/main/img_main_content13.png) no-repeat;width: 50%;border: 1px solid #000;padding-top: 25%;background-size: cover;margin-bottom: 300px;}
+  </style>
+</head>
+<body>
+  <img src="/navercorp/img/main/img_main_content13.png" alt="" class="img">
+  <div class="box1">
+    <img src="/navercorp/img/main/img_main_content13.png" alt="">
+  </div>
+  <div class="box2"><img src="/navercorp/img/main/img_main_content13.png" alt=""></div>
+  <div class="box3"></div>
+<style>
+  h2{padding: 0;margin: 0;}
+  .ex1{background: #000;width: 100%;position: relative;margin-bottom: 20px;}
+  .ex1 .inner{background: url(/navercorp/img/naver/1784소개.jpg) no-repeat;background-size: 100% auto;padding-top: 23.958%;height: 0;}
+  /* 배경이미지는 브라우저 크기에 따라 변동 */
+  .ex1 h2{color: #fff; font-size: 60px;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);}
+  /* 영역 안에 정중앙 정렬 */
+
+  .ex2 {padding: 0 10%;}
+  .ex2 .container{display: flex;justify-content: space-between;}
+  .ex2 .box{width: calc(50% - 15px);}
+  .ex2 .box .txt{padding-top: 62.5%;border: 1px solid #000;background: url(/navercorp/story/img/main2.jpg);background-size: 100% auto;position: relative;}
+  .ex2 .box strong{font-size: 30px;font-weight: 800;color: #fff;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);background: pink;}
+</style>
+
+  <div class="ex1">
+    <div class="inner">
+      <h2>page title</h2>
+    </div>
+  </div>
+  
+  <div class="ex2">
+    <div class="container">
+      <div class="box">
+        <div class="txt">
+          <strong>text</strong>
+        </div>
+      </div>
+      <div class="box">
+        <div class="txt">
+          <strong>text</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>

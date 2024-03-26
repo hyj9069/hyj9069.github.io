@@ -1,0 +1,287 @@
+@charset "UTF-8";
+
+/* common */
+body{font-family: "Pretendard Variable","pretendard","Noto Sans KR","맑은고딕",MalgunGothic,"Apple SD Gothic Neo",sans-serif;color: #333;line-height: 1.4;position: relative;font-size: 16px;color: #666;}
+.hide_txt{
+  display: block;
+  position: absolute;
+  width: 1px;height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: polygon(0 0,0 0,0 0);
+}
+.inner {
+  width: 94%;
+  max-width: 1280px;
+  margin: auto;
+}
+
+/* common-end */
+
+/* Heder(헤더 영역) */
+header {
+  position: relative;
+  height: 100px;
+  overflow: hidden;
+  background: #dedede;
+  z-index: 9999;
+}
+/* Footer(푸터 영역) */
+
+
+/* index 본문 */
+.hashtag {
+  display: flex;
+}
+.hashtag li {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  position: relative;
+}
+.hashtag li::after {
+  content: '';
+  width: 2px;
+  height: 2px;
+  background: #666;
+  position: absolute;
+  right: -10px;
+}
+.hashtag li:last-child::after {
+  display: none;
+}
+/* Main(본문) */
+main .section {}
+
+main .content_box .content_txt1 {color: #000;}
+/* business1,4 common */
+main .content_txt1 strong {
+  line-height: 1.2em;
+  display: block;
+  font-weight: 900;
+}
+main .business1 .btns,
+main .business3 .btns,
+main .business4 .btns {
+  display: flex;
+  gap: 10px;
+}
+main .business1 .btns a,
+main .business3 .btns a,
+main .business4 .btns a {
+  display: flex;
+  width: 190px;
+  height: 66px;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  border-radius: 33px;
+  color: #fff;
+}
+main .content_box .contents {
+  /* width: 535px; */
+  letter-spacing: -0.03em;
+} 
+/* business1 */
+main .business1 {
+  position: relative;
+}
+main .business1 .content_box::before {
+  content: '';
+  background: url(/img/main_sec02bg.png) no-repeat;
+  background-size: cover;
+  position: absolute;
+}
+main .business1 .content_box::after {
+  content: '';
+  display: block;
+  width: 930px;
+  height: 606px;
+  background: url(/img/main_sec02.png) no-repeat;
+  position: absolute;
+  left: -50px;
+  bottom: -192px;
+  z-index: 2;
+}
+main .business1 .content_box {
+  position: relative;
+  z-index: 3;
+}
+main .business1 .content_box .contents {
+  position: relative;
+  z-index: 3;
+}
+main .business1 .btns .btn_bg1 {
+  background: #c2d0f2;
+  color: #2149a6;
+}
+main .business1 .btns .btn_bg2 {
+  background: #2149a6;
+}
+/* business3 */
+main .business3 {
+  
+}
+main .business3 .inner {
+  position: relative;
+}
+main .business3 .content_box {
+  position: relative;
+  z-index: 3;
+}
+main .business3 .content_box::before {
+  content: '';
+  display: block;
+  width: 910px;
+  height: 691px;
+  background: url(/img/main_sec04.png) no-repeat;
+  position: absolute;
+  left: -100px;
+  top: 50%;
+  transform: translateY(-45%);
+  z-index: 2;
+}
+main .business3 .content_box .contents {
+  position: relative;
+  z-index: 3;
+}
+main .business3 .btns .btn_bg1 {
+  background-color: #dfdfdf;
+  color: #737373;
+}
+main .business3 .btns .btn_bg2 {
+  background: #000;
+}
+/* business4 */
+main .business4 {
+  background: url(/img/main_sec05bg.png) no-repeat;
+}
+main .business4 .content_box {
+  color: #fff;
+}
+main .business4 .hashtag li::after {
+  background: #fff;
+}
+main .business4 .content_txt1 {
+  color: #fff;
+}
+main .business4 .btns .btn_bg1 {
+  background: #fff;
+  color: #04255d;
+}
+main .business4 .btns .btn_bg2 {
+  background: #2071f8;
+}
+/* main .business4 .content_txt1 span,
+main .business4 .content_txt1 strong {
+  color: inherit;
+} */
+
+
+body::before {
+  background: slateblue;
+  color: #fff;
+  padding: 1.5em;
+  font-size: 20px;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+/* --------------- */
+@media screen and (min-width:1280px) {
+  body::before {content:'PC'}
+  main .section {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    min-height: 700px;
+  }
+  main .section .content_txt1 {
+    margin: 50px 0 95px 0;
+  }
+  main .section .content_txt1 span {
+    font-size: 24px;
+  }
+  main .section .content_txt1 strong {
+    margin: 16px 0 30px;
+    font-size: 60px;
+  }
+  main .business1 .content_box,
+  main .business3 .content_box {
+    padding-left: 57%;
+  }
+  main .business1 .content_txt1 p,
+  main .business3 .content_txt1 p {
+    color: #676666;
+  }
+  /* business1 */
+  main .business1 .content_box::before {
+    width: 1032px;
+    height: 930px;
+    bottom: -192px;
+    left: -295px;
+  }
+  /*  */
+  main .business2 .content_box {
+    padding-right: 55%;
+  }
+ 
+
+}
+@media screen and (max-width:1279px) {
+  body::before {content:'Tab3'}
+  main .section {padding: 80px 0;}
+  main .section .content_box {padding-left: 55%;}
+  main .section .content_txt1 {
+    margin: 35px 0 70px 0;
+  }
+  main .section .content_txt1 span {
+    font-size: 18px;
+  }
+  main .section .content_txt1 strong {
+    margin: 16px 0 28px;
+    font-size: 50px;
+  }
+  main .section .content_txt1 p br {display: none;}
+
+  /* business1 */
+  main .business1 .content_box::before {
+    width: 757px;
+    height: 685px;
+    left: -100px;
+  }
+}
+@media screen and (max-width:1023px) {
+  body::before {content:'Tab2'}
+  main .section .content_box {padding-left: 0;}
+  
+}
+@media screen and (max-width:768px) {
+  body::before {content:'Tab1'}
+  main .section {padding: 50px 0;}
+  main .section .content_txt1 {
+    margin: 40px 0 65px 0;
+  }
+  main .section .content_txt1 strong {
+    margin: 14px 0 28px;
+    font-size: 38px;
+  }
+  main .business4 .btns a {
+    width: 150px;
+    height: 50px;
+    font-size: 16px;
+    border-radius: 25px;
+  }
+  main .business1::before {
+    width: 600px;
+    height: 543px;
+  }
+}
+@media screen and (max-width:510px) {
+  body::before {content:'Mob'}
+  .hashtag {display: none;}
+  main .section .content_txt1 strong {
+    font-size: 38px;
+  }
+}
+  
