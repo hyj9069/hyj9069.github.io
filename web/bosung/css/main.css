@@ -2,7 +2,7 @@
   --color-point--: #e57200;
   --color-main--: #000e15;
 }
-html  {overflow: hidden;}
+html  {overflow-x: hidden;}
 html, body {
   width: 100%;
   height: 100%;

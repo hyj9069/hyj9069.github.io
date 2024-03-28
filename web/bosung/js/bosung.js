@@ -1,25 +1,25 @@
 $(document).ready(function () {
-  window.addEventListener("wheel", function(e){
-    e.preventDefault();
-  },{passive : false});
+//   window.addEventListener("wheel", function(e){
+//     e.preventDefault();
+//   },{passive : false});
 
-  let $html = $("html");
-  let page = 1;
-  let lastPage = $("section").length;
-  $html.animate({scrollTop:0},10)
+//   let $html = $("html");
+//   let page = 1;
+//   let lastPage = $("section").length;
+//   $html.animate({scrollTop:0},10)
 
-  $(window).on("wheel", function(e) {
-    if($html.is(":animated")) return;
-    if(e.originalEvent.deltaY > 0) {
-        if(page == lastPage+1) return;
-        page++;
-    } else if(e.originalEvent.deltaY < 0) {
-        if(page == 1) return;
-        page--;
-    }
-    var posTop =(page-1) * $(window).height();
-    $html.animate({scrollTop : posTop});
-})
+//   $(window).on("wheel", function(e) {
+//     if($html.is(":animated")) return;
+//     if(e.originalEvent.deltaY > 0) {
+//         if(page == lastPage+1) return;
+//         page++;
+//     } else if(e.originalEvent.deltaY < 0) {
+//         if(page == 1) return;
+//         page--;
+//     }
+//     var posTop =(page-1) * $(window).height();
+//     $html.animate({scrollTop : posTop});
+// })
 
   let preScollTop = 0;
   let shBtn = $(".search");
