@@ -1088,6 +1088,7 @@ section {
 .sec5 .inner .swiper.mediaSwiper .slide_txt {
   padding: 20px 20px 15px;
   background: #fff;
+  height: 100%;
 }
 .sec5 .inner .swiper.mediaSwiper .slide_txt p {
   display: -webkit-box;

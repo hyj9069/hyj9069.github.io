@@ -195,9 +195,9 @@ $(document).ready(function () {
   const sec5Swiper = new Swiper(".mediaSwiper", {
     direction: "horizontal",
     loop: true,
-    autoplay : {
-      delay : 2000
-    },
+    // autoplay : {
+    //   delay : 2000
+    // },
     speed: 1000,
     slidesPerView: 2,
     spaceBetween: 20,
