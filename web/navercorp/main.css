@@ -1230,15 +1230,18 @@ footer .copyright {
   width: 250px;
   height: 270px;
 }
-.intro .sub_content .content_box .video_box {
-  border: 1px solid #000;
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
 .intro .sub_content .content_box .sub_desc p {
   padding-top: 33px;
   text-align: end;
+}
+.intro .sub_content .content_box .sub_desc .desc_item li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.intro .sub_content .content_box .sub_desc .video_box iframe {
+  width: 100%;
+  display: block;
 }
 /* 1784소개-end */
 
