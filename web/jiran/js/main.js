@@ -45,8 +45,7 @@ $(function () {
 
   new Swiper(".swiper", {
     direction: "horizontal",
-    slidesPerView: 2,
-    spaceBetween: 40,
+    slidesPerView: 1,
     loop: true,
     autoplay: {
       delay: 3000,
@@ -59,6 +58,12 @@ $(function () {
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+      },
     },
   });
 
