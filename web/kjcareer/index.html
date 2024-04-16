@@ -1,157 +1,388 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>국제커리어센터</title>
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/fonts.css">
-  <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
-  <div id="wrap">
-    <header>
-        <h1><a href=""><span class="hide_txt">국제커리어센터</span></a></h1>
-        <nav>
-          <ul id="gnb">
-            <li><a href="#">센터소개</a>
-              <ul class="dep2">
-                <li><a href="">대표인사말</a></li>
-                <li><a href="">연혁</a></li>
-                <li><a href="">조직도</a></li>
-                <li><a href="">주요사업</a></li>
-                <li><a href="">찾아오시는 길</a></li>
-                <li><a href="">전국지점</a></li>
-              </ul>
-            </li>
-            <li><a href="#">국민취업제도</a>
-              <ul class="dep2">
-                <li><a href="#">소개</a></li>
-                <li><a href="#">1:1 맞춤 컨설팅</a></li>
-              </ul>
-            </li>
-            <li><a href="#">청년지원사업</a>
-              <ul class="dep2">
-                <li><a href="#">광주청년드림수당</a></li>
-                <li><a href="#">청년일자리도약장려금</a></li>
-                <li><a href="#">청년내일채움공제</a></li>
-                <li><a href="#">청년재직자내일채움공제</a></li>
-                <li><a href="#">돌봄청년희망징검다리클래스</a></li>
-                <li><a href="#">광주청년일경험드림플러스</a></li>
-                <li><a href="#">미래내일 일경험 프로젝트형 사업</a></li>
-                <li><a href="#">미래내일 일경험 기업탐방형 사업</a></li>
-                <li><a href="#">미래내일 일경험 인턴형 사업</a></li>
-              </ul>
-            </li>
-            <li><a href="#">희망리턴패키지사업</a>
-              <ul class="dep2">
-                <li><a href="#">소개</a></li>
-                <li><a href="#">1:1 맞춤</a></li>
-              </ul>
-            </li>
-            <li><a href="#">소통&middot;공유</a>
-              <ul class="dep2">
-                <li><a href="#">공지 및 뉴스</a></li>
-                <li><a href="#">취업현황</a></li>
-                <li><a href="#">인재채용</a></li>
-                <li><a href="#">자료실</a></li>
-                <li><a href="#">상담 및 문의</a></li>
-              </ul>
-            </li>
-            <!--중간점 : &middot; => HTML 엔티티(Entities)-->
-          </ul>
-        </nav>
-        <div class="util">
-          <a href="#" class="btn_style btn1" target="_blank">국제직업전문학교</a>
-          <button class="btn_sitemap">
-            <span class="hide_txt">전체메뉴보기</span>
-            <span class="btn_bar bar1"></span>
-            <span class="btn_bar bar2"></span>
-          </button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>국제커리어센터</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/js/script.js"></script>
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <div class="header_inner">
+          <h1>
+            <a href="#"><span class="hide_txt">국제커리어센터</span></a>
+          </h1>
+          <nav>
+            <ul id="gnb">
+              <li>
+                <a href="#">센터소개</a>
+                <ul class="dep2">
+                  <li><a href="#">대표인사말</a></li>
+                  <li><a href="#">연혁</a></li>
+                  <li><a href="#">조직도</a></li>
+                  <li><a href="#">주요산업</a></li>
+                  <li><a href="#">찾아오시는길</a></li>
+                  <li><a href="#">전국지점</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">국민취업제도</a>
+                <ul class="dep2">
+                  <li><a href="#">소개</a></li>
+                  <li><a href="#">1:1 맞춤 컨설팅</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">청년지원사업</a>
+                <ul class="dep2">
+                  <li><a href="#">광주청년드림수당</a></li>
+                  <li><a href="#">청년일자리도약장려금</a></li>
+                  <li><a href="#">청년내일채움공제</a></li>
+                  <li><a href="#">청년재직자내일채움공제</a></li>
+                  <li><a href="#">돌봄청년희망징검다리클래스</a></li>
+                  <li><a href="#">광주청년일경험드림플러스</a></li>
+                  <li><a href="#">미래내일 일경험 프로젝트형 사업</a></li>
+                  <li><a href="#">미래내일 일경험 기업탐방형 사업</a></li>
+                  <li><a href="#">미래내일 일경험 인턴형 사업</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">희망리턴패키지사업</a>
+                <ul class="dep2">
+                  <li><a href="#">소개</a></li>
+                  <li><a href="#">1:1 맞춤 컨설팅</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">소통&middot;공유</a>
+                <ul class="dep2">
+                  <li><a href="#">공지 및 뉴스</a></li>
+                  <li><a href="#">취업현황</a></li>
+                  <li><a href="#">인재채용</a></li>
+                  <li><a href="#">자료실</a></li>
+                  <li><a href="#">상담 및 문의</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <div class="util">
+            <a href="http://www.kjca.co.kr/" class="btn_style1" target="_blank">국제직업전문학교</a>
+            <button class="btn_sitemap">
+              <span class="hide_txt">전체메뉴보기</span>
+              <span class="btn_bar bar1"></span>
+              <span class="btn_bar bar2"></span>
+            </button>
+          </div>
+          <div class="sitemap_wrap">
+            <ul class="sitemap">
+              <li>
+                <a href="#">센터소개</a>
+                <ul class="dep2">
+                  <li><a href="#">대표인사말</a></li>
+                  <li><a href="#">연혁</a></li>
+                  <li><a href="#">조직도</a></li>
+                  <li><a href="#">주요산업</a></li>
+                  <li><a href="#">찾아오시는길</a></li>
+                  <li><a href="#">전국지점</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">국민취업제도</a>
+                <ul class="dep2">
+                  <li><a href="#">소개</a></li>
+                  <li><a href="#">1:1 맞춤 컨설팅</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">청년지원사업</a>
+                <ul class="dep2">
+                  <li><a href="#">광주청년드림수당</a></li>
+                  <li><a href="#">청년일자리도약장려금</a></li>
+                  <li><a href="#">청년내일채움공제</a></li>
+                  <li><a href="#">청년재직자내일채움공제</a></li>
+                  <li><a href="#">돌봄청년희망징검다리클래스</a></li>
+                  <li><a href="#">광주청년일경험드림플러스</a></li>
+                  <li><a href="#">미래내일 일경험 프로젝트형 사업</a></li>
+                  <li><a href="#">미래내일 일경험 기업탐방형 사업</a></li>
+                  <li><a href="#">미래내일 일경험 인턴형 사업</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">희망리턴패키지사업</a>
+                <ul class="dep2">
+                  <li><a href="#">소개</a></li>
+                  <li><a href="#">1:1 맞춤 컨설팅</a></li>
+                </ul>
+              </li>
+              <li><a href="#">중장년경력설계 카운슬링</a></li>
+              <li>
+                <a href="#">소통&middot;경유</a>
+                <ul class="dep2">
+                  <li><a href="#">공지 및 뉴스</a></li>
+                  <li><a href="#">취업현황</a></li>
+                  <li><a href="#">인재채용</a></li>
+                  <li><a href="#">자료실</a></li>
+                  <li><a href="#">상담 및 문의</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="sitemap_wrap">
-          <ul class="sitemap">
-            <li>
-              <a href=""></a>
-              <ul class="dep2">
-                <li><a href=""></a></li>
-              </ul>
+      </header>
+      <main>
+        <!-- section : 주제가 구분되는 내용 포함해야 함 -->
+        <div class="swiper main_visual_wrap">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+              <div class="bg">
+                <img src="../img/main1-bg (2).png" alt="메인배경1" />
+              </div>
+              <div class="humun">
+                <img src="../img/main1-cont (2).png" alt="메인이미지1" />
+              </div>
+              <div class="text">
+                <img src="../img/balloon.svg" alt="메인이미지 텍스트 " />
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="bg">
+                <img src="../img/main1-bg (1).png" alt="메인배경2" />
+              </div>
+              <div class="humun">
+                <img src="../img/main1-cont (1).png" alt="메인이미지2" />
+              </div>
+              <div class="text">
+                <img src="../img/balloon2.svg" alt="메인이미지 텍스트" />
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="bg">
+                <img src="../img/main1-bg(3).png" alt="메인배경3" />
+              </div>
+              <div class="humun">
+                <img src="../img/main1-cont(3).png" alt="메인콘텐츠3" />
+              </div>
             </li>
           </ul>
+          <div class="swiper-button-prev btn">
+            <img src="../img/prev_icon.png" alt="이전 메인이미지 보기" />
+          </div>
+          <div class="swiper-button-next btn">
+            <img src="../img/next_icon.png" alt="다음 메인이미지 보기" />
+          </div>
         </div>
-    </header>
-    <main>
-      <!-- section : 주제가 구분되는 내용 포함해야 함 -->
-      <div class="main_visual_wrap">
         <div class="section business1">
           <div class="inner">
             <div class="content_box">
-              <div class="contents">
-                <h2 class="hide_txt">중장년경력설계 카운슬링</h2>
-                <ul class="hashtag">
-                  <li>#국민내일배움카드</li>
-                  <li>#직업훈련포털</li>
-                  <li>#경력유지서비스</li>
-                  <li>#미래경력설계</li>
-                </ul>
-                <div class="content_txt1">
-                  <span>당신의 취업을 응원합니다.</span>
-                  <strong>국민취업지원제도</strong>
-                  <p>‘국민취업지원제도’에 기존 취업성공패키지 및 청년구직활동지원금을 통합하여 <br>
-                    취업취약계층에 대한 종합적 취업지원 제도로서 운영하며, <br>
-                    취업을 원하는 청년, 장기실업자, 경력단절여성, 저소득 구직자, 특수형태근로종사자 등 <br>
-                    취업취약계층으로 인정되는 분들은 국민취업지원제도의 지원을 받으실 수 있습니다.</p>
+              <h2 class="hide_txt">국민취업지원제도</h2>
+              <ul class="hashtag">
+                <li>#구직촉진수당</li>
+                <li>#취업지원서비스</li>
+                <li>#취업활동비용</li>
+                <li>#일자리 소개</li>
+              </ul>
+              <div class="content_txt1">
+                <span>당신의 취업을 응원합니다.</span>
+                <strong>국민취업지원제도</strong>
+                <p>
+                  ‘국민취업지원제도’에 기존 취업성공패키지 및 청년구직활동지원금을 통합하여 <br />취업취약계층에 대한 종합적 취업지원 제도로서 운영하며,<br />취업을 원하는 청년, 장기실업자,
+                  경력단절여성, 저소득 구직자, 특수형태근로종사자 등 <br />취업취약계층으로 인정되는 분들은 국민취업지원제도의 지원을 받으실 수 있습니다.
+                </p>
+              </div>
+              <div class="btns">
+                <a href="#" class="btn_style2 btn_bg1">자세히보기</a>
+                <a href="#" class="btn_style2 btn_bg2">신청하기</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section business2">
+          <div class="inner">
+            <h2 class="hide_txt">청년지원사업</h2>
+            <ul class="hashtag">
+              <li>#창조인재</li>
+              <li>#취업경력개발</li>
+              <li>#최우수 직업교육</li>
+              <li>#기업체 맞춤형 위탁교육</li>
+              <li>#맞춤취업패키지</li>
+              <li>#100%자격취득</li>
+            </ul>
+            <div class="content_box">
+              <div class="content_txt2">
+                <strong
+                  >청년의 꿈이 <br />
+                  이루어지는 곳!~</strong
+                >
+                <span
+                  >행복을 주는 일자리를 <br />
+                  만들어드립니다.</span
+                >
+              </div>
+              <div class="content_right">
+                <div class="content_slide">
+                  <div class="slide_track">
+                    <div class="slide_box slide1">
+                      <div class="card_txt">
+                        <div class="card_name">
+                          <span
+                            >당신의 취업을 <br />
+                            응원합니다.</span
+                          >
+                          <img src="/img/benefit_img1.png" alt="" />
+                        </div>
+                        <strong>광주청년드림수당</strong>
+                        <p>청년실업률 증가 등 사회진입에 어려움을 겪고 있는 청년에게 구직에 필요한 비용을 지원하고, 역량강화 프로그램을 제공합니다.</p>
+                        <div class="btns">
+                          <a href="" class="btn_style2 btn_bg1">자세히보기</a>
+                          <a href="" class="btn_style2 btn_bg2" target="_blank">신청하기</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slide_box slide2">
+                      <div class="card_name">
+                        <span
+                          >당신의 취업을 <br />
+                          응원합니다.</span
+                        >
+                        <img src="/img/benefit_img1.png" alt="" />
+                      </div>
+                      <strong>청년일자리도약장려금</strong>
+                      <p>5인 이상 우선지원대상기업에서 취업애로청년을 정규지긍로 채용하고 6개월 이상 고용유지시 최장 2년간 최대 1,200만원 지원</p>
+                      <div class="btns">
+                        <a href="" class="btn_style2 btn_bg1">자세히보기</a>
+                        <a href="" class="btn_style2 btn_bg2" target="_blank">신청하기</a>
+                      </div>
+                    </div>
+                    <div class="slide_box slide3">
+                      <div class="card_name">
+                        <span
+                          >정규직전환율 <br />
+                          90% 지원프로그램</span
+                        >
+                        <img src="/img/benefit_img1.png" alt="" />
+                      </div>
+                      <strong>청년내일채움공제</strong>
+                      <p>
+                        청년내일채움공제는 노동시장에 신규 취업한 청년이 중소기업에서 초기경력을 형성하고, 기업은 우수한 청년인재를 확보할 수 있도록 청년-기업-정부가 공동으로 적립하여 청년의
+                        장기근속을 지원하는 제도
+                      </p>
+                      <div class="btns">
+                        <a href="" class="btn_style2 btn_bg1">자세히보기</a>
+                        <a href="" class="btn_style2 btn_bg2" target="_blank">신청하기</a>
+                      </div>
+                    </div>
+                    <div class="slide_box slide4">
+                      <div class="card_name">
+                        <span
+                          >당신의 취업을 <br />
+                          응원합니다.</span
+                        >
+                        <img src="/img/benefit_img1.png" alt="" />
+                      </div>
+                      <strong>청년재직자내일채움공제</strong>
+                      <p>
+                        정부, 중소(중견)기업 사업주, 청년근로자(만15세 이상 34세 이하, 6개월 이상 재직 중인 정규직 근로자)이 공동으로 적립한 공제금을 가입기간(5년)에 따라 장기재직한 청년근로자에게
+                        성과보상금 형태로 지급하는 공제
+                      </p>
+                      <div class="btns">
+                        <a href="" class="btn_style2 btn_bg1">자세히보기</a>
+                        <a href="" class="btn_style2 btn_bg2" target="_blank">신청하기</a>
+                      </div>
+                    </div>
+                    <div class="slide_box slide5">
+                      <div class="card_name">
+                        <span
+                          >정규직전환율 <br />
+                          90% 지원프로그램</span
+                        >
+                        <img src="/img/benefit_img1.png" alt="" />
+                      </div>
+                      <strong>청년일경험지원사업</strong>
+                      <p>청년에게 중소·중견기업의 일경험 기회를 제공함으로써 직무경력과 정규직 취업가능성을 제고하고, 중소기업 등의 인력난 해소에 기여하는 청년 민간 일자리 창출 사업입니다.</p>
+                      <div class="btns">
+                        <a href="" class="btn_style2 btn_bg1">자세히보기</a>
+                        <a href="" class="btn_style2 btn_bg2" target="_blank">신청하기</a>
+                      </div>
+                    </div>
+                    <div class="slide_box slide6">
+                      <div class="card_name">
+                        <span
+                          >정규직전환율 <br />
+                          90% 지원프로그램</span
+                        >
+                        <img src="/img/benefit_img1.png" alt="" />
+                      </div>
+                      <strong>돌봄청년의망징검다리클래스</strong>
+                      <p>저소득 청년을 대상으로 통합사례관리를 통해 개인별 욕구와 특성에 맞는 자격증 취득, 직업훈련 등 취창업지원 프로그램을 실시하여 빈곤 탈피 및 자립 기반 마련을 돕는 사업입니다.</p>
+                      <div class="btns">
+                        <a href="" class="btn_style2 btn_bg1">자세히보기</a>
+                        <a href="" class="btn_style2 btn_bg2" target="_blank">신청하기</a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="btns">
-                  <a href="#" class="btn_style2 btn_bg1">자세히보기</a>
-                  <a href="#" class="btn_style2 btn_bg2">신청하기</a>
+                <div class="slide_btn">
+                  <button class="btn_prev disable">
+                    <span class="material-symbols-outlined"> chevron_left </span>
+                  </button>
+                  <button class="btn_next">
+                    <span class="material-symbols-outlined"> chevron_right </span>
+                  </button>
                 </div>
               </div>
             </div>
+            <a href="#" class="btn_lnk">
+              청년지원사업 전체보기
+              <span class="material-symbols-outlined"> chevron_right </span>
+            </a>
           </div>
         </div>
         <div class="section business3">
           <div class="inner">
             <div class="content_box">
-              <div class="contents">
-                <h2 class="hide_txt">중장년경력설계 카운슬링</h2>
-                <ul class="hashtag">
-                  <li>#소상공인진흥단</li>
-                  <li>#취업성공패키지</li>
-                  <li>#장려수당</li>
-                  <li>#사업정리 컨설팅</li>
-                </ul>
-                <div class="content_txt1">
-                  <span>소상공인 폐업부터 취업까지 희망리턴패키지로 준비하세요!</span>
-                  <strong>희망리턴패키지사업</strong>
-                  <p>경영상의 어려움으로 폐업 후 취업을 희망하거나 준비하는 소상공인에게 폐업에서 <br>
-                  취업에 이르기까지의 전 과정을 지원하는 제도다. 구체적으로 폐업 단계부터 재기교육,
-                  <br>
-                  전직 장려수당, 취업성공패키지 등 전 과정 지원이 이뤄진다.</p>
-                </div>
-                <div class="btns">
-                  <a href="#" class="btn_style2 btn_bg1">자세히보기</a>
-                  <a href="#" class="btn_style2 btn_bg2">신청하기</a>
-                </div>
+              <h2 class="hide_txt">국민취업지원제도</h2>
+              <ul class="hashtag">
+                <li>#소상공인진흥단</li>
+                <li>#취업성공패키지</li>
+                <li>#장려수당</li>
+                <li>#사업정리 컨설팅</li>
+              </ul>
+              <div class="content_txt1">
+                <span>소상공인 폐업부터 취업까지 희망리턴패키지로 준비하세요!</span>
+                <strong>희망리턴패키지사업</strong>
+                <p>
+                  경영상의 어려움으로 폐업 후 취업을 희망하거나 준비하는 소상공인에게 취업에 이르기까지의 전 과정을 지원하는 제도다. 구체적으로 폐업 단계부터 재기교육, 전직 장려수당, 취업성공패키지 등
+                  전 과정 지원이 이뤄진다.
+                </p>
+              </div>
+              <div class="btns">
+                <a href="#" class="btn_style2 btn_bg1">자세히보기</a>
+                <a href="#" class="btn_style2 btn_bg2">신청하기</a>
               </div>
             </div>
           </div>
-
         </div>
         <div class="section business4">
           <div class="inner">
             <div class="content_box">
-              <h2 class="hide_txt">중장년경력설계 카운슬링</h2>
+              <h2 class="hide_txt">중장년 경력 설계 카운슬링</h2>
               <ul class="hashtag">
                 <li>#국민내일배움카드</li>
-                <li>#직업훈현포털</li>
+                <li>#직업훈련포털</li>
                 <li>#경력유지서비스</li>
                 <li>#미래경력설계</li>
               </ul>
               <div class="content_txt1">
                 <span>슬기롭게 인생 2막 준비하기</span>
                 <strong>중장년경력설계 카운슬링</strong>
-                <p>미래 준비의 사각지대에 있는 만 40세 이상 재직자 및 특수형태근로종사자에게 <br>중·장기적인 관점의 경력설계 컨설팅을 제공하는 제도입니다.</p>
+                <p>미래 준비의 사각지대에 있는 만 40세 이상 재직자 및 특수형태근로종사자에게 <br />중·장기적인 관점의 경력설계 컨설팅을 제공하는 제도입니다.</p>
               </div>
               <div class="btns">
                 <a href="#" class="btn_style2 btn_bg1">자세히보기</a>
@@ -161,14 +392,355 @@
           </div>
         </div>
         <div class="section business5">
-          <div class="inner"></div>
+          <div class="inner">
+            <h2 class="hide_txt">소식과 정보</h2>
+            <div class="content_box">
+              <div class="content_left">
+                <div class="content_txt2">
+                  <h3>소통·공유</h3>
+                  <strong
+                    >생생한 <em>소식</em>과 <em>정보</em>를 <br />
+                    <em>전해</em>드립니다.</strong
+                  >
+                  <span
+                    >국제커리어센터의 <br />
+                    가장 빠르고 정확한 소식을 전해드립니다.</span
+                  >
+                </div>
+                <a href="#" class="btn_lnk">
+                  공지 및 뉴스 바로가기
+                  <span class="material-symbols-outlined"> chevron_right </span>
+                </a>
+              </div>
+
+              <div class="slide_wrap">
+                <div class="content_right">
+                  <div class="content_slide">
+                    <div class="slide_track">
+                      <div class="slide_box slide1">
+                        <div class="card_txt">
+                          <div class="card_name">
+                            <span>Notice</span>
+                          </div>
+                          <strong>2020 온라인 채용박람회</strong>
+                          <p>** 온라인 채용박람회 개요 **○&nbsp;행사명 :&nbsp;2020년 친환경자동차부품클러스터조성사업 온라인 채용박람회○&nbsp;일 시 : 2020.09.1...</p>
+                          <span>2020-09-11</span>
+                        </div>
+                      </div>
+                      <div class="slide_box slide2">
+                        <div class="card_txt">
+                          <div class="card_name">
+                            <span>Notice</span>
+                          </div>
+                          <strong>광주청년일경험드림(Dream)-공공기관형』5기 참여기관 모집안내</strong>
+                          <p>2019년 5기광주청년 일경험드림(Dream)사업 공공기관형1. 사업개요° 사업명 : 광주청년일경험드림(Dream)사업 5기 – 공공기관형° 사업목적...</p>
+                          <span>2019-01-14</span>
+                        </div>
+                      </div>
+                      <div class="slide_box slide3">
+                        <div class="card_txt">
+                          <div class="card_name">
+                            <span>Notice</span>
+                          </div>
+                          <strong>2020 온라인 채용박람회</strong>
+                          <p>** 온라인 채용박람회 개요 **○&nbsp;행사명 :&nbsp;2020년 친환경자동차부품클러스터조성사업 온라인 채용박람회○&nbsp;일 시 : 2020.09.1...</p>
+                          <span>2020-09-11</span>
+                        </div>
+                      </div>
+                      <div class="slide_box slide4">
+                        <div class="card_txt">
+                          <div class="card_name">
+                            <span>Notice</span>
+                          </div>
+                          <strong>광주청년드림(Dream)-공공기관형』4기 참여기관(사) 모집 종료</strong>
+                          <p>&nbsp;2018년 광주광역시광주청년드림(Dream)사업&nbsp;4기&nbsp;-&nbsp;공공기관형&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. 사업개요✤&nbsp;사업...</p>
+                          <span>2018-06-28</span>
+                        </div>
+                      </div>
+                      <div class="slide_box slide5">
+                        <div class="card_txt">
+                          <div class="card_name">
+                            <span>Notice</span>
+                          </div>
+                          <strong>★에너지밸리 채용박람회 BIXPO 2017 개최★</strong>
+                          <p>《 에너지밸리 채용박람회 BIXPO 2017 》────────────────────────────────────────&nbsp;...</p>
+                          <span>2017-10-13</span>
+                        </div>
+                      </div>
+                      <div class="slide_box slide6">
+                        <div class="card_txt">
+                          <div class="card_name">
+                            <span>Notice</span>
+                          </div>
+                          <strong>2017 광주권 일자리 박람회 일정안내</strong>
+                          <p></p>
+                          <span>2017-08-16</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide_btn">
+                    <button class="btn_prev disable">
+                      <span class="material-symbols-outlined"> chevron_left </span>
+                    </button>
+                    <button class="btn_next">
+                      <span class="material-symbols-outlined"> chevron_right </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="section business6">
-          <div class="inner"></div>
+          <div class="inner">
+            <div class="center_list_box">
+              <h2 class="hide_txt">국제커리어센터 찾기</h2>
+              <div class="content_txt3">
+                <strong>꿈이 실현되는 곳! <span>국제커리어센터</span></strong>
+                <p>전국 곳곳에 있는 국제커리어센터를 확인하세요</p>
+              </div>
+              <div class="center_list">
+                <ul class="tabs">
+                  <li class="center1">서울권</li>
+                  <li class="center2">경기권</li>
+                  <li>광주권</li>
+                  <li>전남/전북권</li>
+                  <li>대전/경상권</li>
+                </ul>
+                <div class="tab_contents">
+                  <div class="content center1">
+                    <ul>
+                      <li>
+                        <span>국제커리어센터 서울관악</span>
+                        <div class="center_btns">
+                          <a href="#" class="btn_view">상세보기</a>
+                          <a href="#">오시는길</a>
+                        </div>
+                      </li>
+                      <li>
+                        <span>국제커리어센터 서울강남</span>
+                        <div class="center_btns">
+                          <a href="#" class="btn_view">상세보기</a>
+                          <a href="#">오시는길</a>
+                        </div>
+                      </li>
+                      <li>
+                        <span>국제커리어센터 서울남부</span>
+                        <div class="center_btns">
+                          <a href="#" class="btn_view">상세보기</a>
+                          <a href="#">오시는길</a>
+                        </div>
+                      </li>
+                      <li>
+                        <span>국제커리어센터 서울동부</span>
+                        <div class="center_btns">
+                          <a href="#" class="btn_view">상세보기</a>
+                          <a href="#">오시는길</a>
+                        </div>
+                      </li>
+                      <li>
+                        <span>국제커리어센터 경기고양</span>
+                        <div class="center_btns">
+                          <a href="#" class="btn_view">상세보기</a>
+                          <a href="#">오시는길</a>
+                        </div>
+                      </li>
+                      <li>
+                        <span>국제커리어센터 경기고양</span>
+                        <div class="center_btns">
+                          <a href="#" class="btn_view">상세보기</a>
+                          <a href="#">오시는길</a>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="content center2">
+                    <ul>
+                      <li>
+                        <span>국제커리어센터 경기고양</span>
+                        <div class="center_btns">
+                          <a href="#" class="btn_view">상세보기</a>
+                          <a href="#">오시는길</a>
+                        </div>
+                      </li>
+                      <li>
+                        <span>국제커리어센터 경기의정부</span>
+                        <div class="center_btns">
+                          <a href="#" class="btn_view">상세보기</a>
+                          <a href="#">오시는길</a>
+                        </div>
+                      </li>
+                      <li>
+                        <span>국제커리어센터 경기고양</span>
+                        <div class="center_btns">
+                          <a href="#" class="btn_view">상세보기</a>
+                          <a href="#">오시는길</a>
+                        </div>
+                      </li>
+                      <li>
+                        <span>국제커리어센터 경기고양</span>
+                        <div class="center_btns">
+                          <a href="#" class="btn_view">상세보기</a>
+                          <a href="#">오시는길</a>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="content center3">
+                    <ul>
+                      <li>
+                        <span>국제커리어센터 광주</span>
+                        <div class="center_btns">
+                          <a href="#" class="btn_view">상세보기</a>
+                          <a href="#">오시는길</a>
+                        </div>
+                      </li>
+                      <li>
+                        <span>국제커리어센터 광주</span>
+                        <div class="center_btns">
+                          <a href="#" class="btn_view">상세보기</a>
+                          <a href="#">오시는길</a>
+                        </div>
+                      </li>
+                      <li>
+                        <span>국제커리어센터 광주</span>
+                        <div class="center_btns">
+                          <a href="#" class="btn_view">상세보기</a>
+                          <a href="#">오시는길</a>
+                        </div>
+                      </li>
+                      <li>
+                        <span>국제커리어센터 광주</span>
+                        <div class="center_btns">
+                          <a href="#" class="btn_view">상세보기</a>
+                          <a href="#">오시는길</a>
+                        </div>
+                      </li>
+                      <li>
+                        <span>국제커리어센터 광주</span>
+                        <div class="center_btns">
+                          <a href="#" class="btn_view">상세보기</a>
+                          <a href="#">오시는길</a>
+                        </div>
+                      </li>
+                      <li>
+                        <span>국제커리어센터 광주</span>
+                        <div class="center_btns">
+                          <a href="#" class="btn_view">상세보기</a>
+                          <a href="#">오시는길</a>
+                        </div>
+                      </li>
+                      <li>
+                        <span>국제커리어센터 광주</span>
+                        <div class="center_btns">
+                          <a href="#" class="btn_view">상세보기</a>
+                          <a href="#">오시는길</a>
+                        </div>
+                      </li>
+                      <li>
+                        <span>국제커리어센터 광주</span>
+                        <div class="center_btns">
+                          <a href="#" class="btn_view">상세보기</a>
+                          <a href="#">오시는길</a>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="content center4">
+                    <ul>
+                      <li>
+                        <span>국제커리어센터 전남전북</span>
+                        <div class="center_btns">
+                          <a href="#" class="btn_view">상세보기</a>
+                          <a href="#">오시는길</a>
+                        </div>
+                      </li>
+                      <li>
+                        <span>국제커리어센터 전남전북</span>
+                        <div class="center_btns">
+                          <a href="#" class="btn_view">상세보기</a>
+                          <a href="#">오시는길</a>
+                        </div>
+                      </li>
+                      <li>
+                        <span>국제커리어센터 전남전북</span>
+                        <div class="center_btns">
+                          <a href="#" class="btn_view">상세보기</a>
+                          <a href="#">오시는길</a>
+                        </div>
+                      </li>
+                      <li>
+                        <span>국제커리어센터 전남전북</span>
+                        <div class="center_btns">
+                          <a href="#" class="btn_view">상세보기</a>
+                          <a href="#">오시는길</a>
+                        </div>
+                      </li>
+                      <li>
+                        <span>국제커리어센터 전남전북</span>
+                        <div class="center_btns">
+                          <a href="#" class="btn_view">상세보기</a>
+                          <a href="#">오시는길</a>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="content center5">
+                    <ul>
+                      <li>
+                        <span>국제커리어센터 대전</span>
+                        <div class="center_btns">
+                          <a href="#" class="btn_view">상세보기</a>
+                          <a href="#">오시는길</a>
+                        </div>
+                      </li>
+                      <li>
+                        <span>국제커리어센터 대전</span>
+                        <div class="center_btns">
+                          <a href="#" class="btn_view">상세보기</a>
+                          <a href="#">오시는길</a>
+                        </div>
+                      </li>
+                      <li>
+                        <span>국제커리어센터 대전</span>
+                        <div class="center_btns">
+                          <a href="#" class="btn_view">상세보기</a>
+                          <a href="#">오시는길</a>
+                        </div>
+                      </li>
+                      <li>
+                        <span>국제커리어센터 경기고양</span>
+                        <div class="center_btns">
+                          <a href="#" class="btn_view">상세보기</a>
+                          <a href="#">오시는길</a>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="center_map_box">
+              <div class="text_box">
+                <strong
+                  >전국으로 <br />
+                  뻗어나가는<br />
+                  국제커리어센터.</strong
+                >
+                <p>
+                  국제커리어센터는<br /><b>서울권, 경기권, 전남/전북권,<br />광주권, 대전/경상권</b>등<br />총 25개의 지점 운영을 통해 <span class="break"></span>전국적으로 취업서비스망을<br />구축하여
+                  고객의 취업을<br />효과적으로 서포트합니다.
+                </p>
+              </div>
+              <div class="map_img">
+                <img src="/img/new_location_map.png" alt="" />
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </main>
-    <footer></footer>
-  </div>
-</body>
+      </main>
+      <footer></footer>
+    </div>
+  </body>
 </html>
