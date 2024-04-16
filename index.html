@@ -1,531 +1,570 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/main.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
-  <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" integrity="sha512-aNMyYYxdIxIaot0Y1/PLuEu3eipGCmsEUBrUq+7aVyPGMFH8z0eTP0tkqAvv34fzN6z+201d3T8HPb1svWSKHQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js" integrity="sha512-qF6akR/fsZAB4Co1QDDnUXWnaQseLGXoniuSuSlPQK6+aWhlMZcHzkasCSlnWoe+TJuudlka1/IQ01Dnhgq95g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://unpkg.com/split-type"></script>
-  <script src="
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"
+      integrity="sha512-aNMyYYxdIxIaot0Y1/PLuEu3eipGCmsEUBrUq+7aVyPGMFH8z0eTP0tkqAvv34fzN6z+201d3T8HPb1svWSKHQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"
+      integrity="sha512-qF6akR/fsZAB4Co1QDDnUXWnaQseLGXoniuSuSlPQK6+aWhlMZcHzkasCSlnWoe+TJuudlka1/IQ01Dnhgq95g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="
   https://cdn.jsdelivr.net/npm/isotope-layout@3.0.6/dist/isotope.pkgd.min.js
   "></script>
-  <script type="module" src="./js/main.js"></script>
-  <title>Document</title>
-</head>
-<body>
-  <div class="cursor"><span class="img-cursor-txt">view</span></div>
-  <div class="wrap">
-    <header id="header">
-      <h1><a href="#">YEJI</a></h1>
-      <a href="#">CONTACT</a>
-    </header>
-    <main class="container">
-      <section class="intro-main">
-        <div class="title">
-          <span class="abhaya t1 cursor-scale">FRONT-END</span>
-          <span class="abhaya t2 cursor-scale">PUBLISHER</span>
-          <span class="abhaya t3 cursor-scale">PORTFOLIO</span>
-        </div>
-        <div class="orbit-content">
-          <div class="square blue"></div>
-          <svg  style="position: relative;" class="path" width="100%" height="100%" viewBox="0 0 888 310" fill="none">
-          <path id="Ellipse 3" d="M877.692 54.5999C881.351 70.5593 872.781 88.6556 853.838 107.769C834.915 126.862 805.748 146.854 768.518 166.571C694.065 206 587.466 244.273 466.374 272.029C345.281 299.786 232.655 311.763 148.461 308.698C106.36 307.165 71.3982 301.872 46.0484 292.927C20.6712 283.973 5.07575 271.416 1.41759 255.456C-2.24057 239.497 6.32862 221.401 25.2722 202.288C44.1954 183.195 73.3618 163.202 110.592 143.486C185.045 104.056 291.644 65.7838 412.737 38.0273C533.829 10.2708 646.455 -1.70639 730.649 1.35864C772.75 2.89129 807.712 8.18431 833.062 17.1289C858.439 26.0832 874.034 38.6405 877.692 54.5999Z" stroke="#fff" fill="none" stroke-width="2"/>
-          </svg>           
-        </div>
-      </section>
-      <section class="intro-sec">
-        <div class="flow-txt">
-          <span class="abhaya">ENJOYWHATYOUWANT</span>
-          <span class="abhaya">ENJOYWHATYOUWANT</span>
-          <span class="abhaya">ENJOYWHATYOUWANT</span>
-        </div>
-        <strong class="split" >WHO'RE YOU?</strong>
-        <p class="intro-txt cursor-scale small">시멘틱 마크업을 통해 웹표준성과 웹접근성을 준수하고자 하며,<br> <br> Aenean massa magnis</p>
-        <div class="scroll-down">
-          <span>scroll-down</span>
-          <span class="material-symbols-outlined">
-            keyboard_double_arrow_down
-          </span>
-        </div>
-      </section>
-      <section class="about">
-        <h2 class="split">ABOUT</h2>
-       <div class="content-wrap">
-         <div class="content-left">
-           <img src="./img/profile.png" alt="프로필사진">
-           <div class="txt-wrap">
-             <span>한예지</span>
-             <span>1998.01.22</span>
-             <span>010-4174-9069</span>
-             <span>yeji9981@gmail.com</span>
-             <span>#열정 #빠른적응력 #끈기 #자기계발 </span>
-           </div>
-         </div>
-         <div class="content-right">
-           <div class="content license">
-             <h3>LICENSE</h3>
-             <span>GTQ(그래픽기술자격) 1급</span>
-             <span>컴퓨터활용능력 2급</span>
-           </div>
-           <div class="content education">
-             <h3>EDUCATION</h3>
-             <div>
-              <span>2024.03</span>
-              <p>이젠컴퓨터아카데미 <br> 
-                UI/UX웹디자인 웹퍼블리셔 프론트엔드 전문가 양성 과정<br> 1003시간 수료
-              </p>
-             </div>
-             <div>
-              <span>2024.02</span>
-              <p>서울사이버대학교 멀티미디어디자인학과 전공</p>
-             </div>
-             <div>
-              <span>2023.02</span>
-              <p>비개발자를 위한, 웹개발 종합반(프로그래밍 실무, 풀스텍)<br> 88시간 수료</p>
-             </div>
-           </div>
-           <div class="content skills">
-             <h3>SKILLS</h3>
-             <img src="./img/photoshop.svg" alt="Photoshop">
-             <img src="./img/illustrator.svg" alt="Illustrator">
-             <img src="./img/html_logo.png" alt="HTML">
-             <img src="./img/css_logo.png" alt="CSS">
-             <img src="./img/js_logo.png" alt="JavaScript">
-             <img src="./img/figma_logo 1.png" alt="figma">
-             <img src="./img/git_logo.png" alt="Git">
-           </div>
-         </div>
-       </div>
-      </section>
-      <section class="projects">
-        <div class="web-proj">
-          <h2 class="split">PROJECTS</h2>
-          <h3>WEB</h3>
-          <ul class="hashtag cursor-scale btn-hover">
-            <li class="active all" data-value="all"><button>#ALL</button></li>
-            <li class="renewal" data-value="renewal"><button>#리뉴얼코딩</button></li>
-            <li class="clone" data-value="clone"><button>#클론코딩</button></li>
-            <li class="responsive" data-value="responsive"><button>#반응형</button></li>
-            <li class="gsap" data-value="gsap"><button>#GSAP</button></li>
-          </ul>
-          <ul class="content-wrap">
-            <li class="item renewal responsive gsap">
-              <a href="./web/bosung/bosung.html" class="img-box cursor-scale img-hover" target="_blank"><img src="./img/ex_bg.jpg" alt="보성그룹 리뉴얼코딩"></a>
-              <div class="txt-wrap cursor-scale small">
-                <h4>보성그룹</h4>
-                <div class="spec">
-                  <span>리뉴얼코딩</span>
-                  <span>반응형</span>
-                  <span>시맨틱마크업</span>
-                  <span>IR</span>
-                </div>
-                <p><em>TOOL</em>Figma, Photoshop, HTML5, CSS3, Javascript, jQuery </p>
-                <p><em>기여도</em>디자인100%  퍼블리싱100%</p>
-              </div>
-              <div class="btn-wrap cursor-scale btn-hover">
-                <button>WEB</button>
-                <button>Figma</button>
-                <button>Git</button>
-              </div>
-
-            </li>
-            <li class="item responsive clone">
-              <a href="./web/sealykorea/index.html"  class="img-box cursor-scale img-hover" target="_blank"><img src="./img/sealy.jpg" alt="씰리코리아 클론코딩"></a>
-              <div class="txt-wrap cursor-scale small">
-                <h4>SEALY KOREA</h4>
-                <div class="spec">
-                  <span>클론코딩</span>
-                  <span>반응형</span>
-                  <span>시맨틱 마크업</span>
-                  <span>IR</span>
-                </div>
-                <p><em>TOOL</em>HTML5, CSS3, Javascript, jQuery </p>
-                <p><em>기여도</em>퍼블리싱100%</p>
-              </div>
-              <div class="btn-wrap cursor-scale btn-hover">
-                <button>WEB</button>
-                <button>Git</button>
-              </div>
-            </li>
-            <li class="item responsive clone">
-              <a href="./web/jiran/index.html" class="img-box cursor-scale img-hover" target="_blank"><img src="./img/jiran.png" alt="지란지교시큐리티 클론코딩"></a>
-              <div class="txt-wrap cursor-scale small">
-                <h4>지란지교시큐리티</h4>
-                <div class="spec">
-                  <span>클론코딩</span>
-                  <span>반응형</span>
-                  <span>시맨틱 마크업</span>
-                  <span>IR</span>
-                </div>
-                <p><em>TOOL</em> HTML5, CSS3, Javascript, jQuery </p>
-                <p><em>기여도</em>퍼블리싱100%</p>
-              </div>
-              <div class="btn-wrap cursor-scale btn-hover">
-                <button>WEB</button>
-                <button>Git</button>
-              </div>
-            </li>
-            <li class="item clone">
-              <a href="./web/navercorp/index.html" class="img-box cursor-scale img-hover" target="_blank"><img src="./img/navercorp.jpg" alt="NAVER Corp 클론코딩"></a>
-              <div class="txt-wrap cursor-scale small">
-                <h4>NAVER Corp</h4>
-                <div class="spec">
-                  <span>클론코딩</span>
-                  <span>시맨틱 마크업</span>
-                  <span>IR&IS</span>
-                </div>
-                <p><em>TOOL</em>HTML5, CSS3, Javascript, jQuery </p>
-                <p><em>기여도</em>퍼블리싱100%</p>
-              </div>
-              <div class="btn-wrap cursor-scale btn-hover">
-                <button>WEB</button>
-                <button>Git</button>
-              </div>
-            </li>
-            <li class="item clone">
-              <a href="./web/kjcareer/index.html" class="img-box cursor-scale img-hover" target="_blank"><img src="./img/kjcareer.png" alt="국제커리어센터 클론코딩"></a>
-              <div class="txt-wrap cursor-scale small">
-                <h4>국제커리어센터</h4>
-                <div class="spec">
-                  <span>클론코딩</span>
-                  <span>시맨틱 마크업</span>
-                  <span>IR</span>
-                </div>
-                <p><em>TOOL</em>HTML5, CSS3, Javascript, jQuery </p>
-                <p><em>기여도</em>퍼블리싱100%</p>
-              </div>
-              <div class="btn-wrap cursor-scale btn-hover">
-                <button>WEB</button>
-                <button>Git</button>
-              </div>
-            </li>
-            <li class="item clone">
-              <a href="#" class="img-box cursor-scale img-hover" target="_blank"><img src="./img/naver-img.png" alt="NAVER"></a>
-              <div class="txt-wrap cursor-scale small">
-                <h4>NAVER</h4>
-                <div class="spec">
-                  <span>클론코딩</span>
-                  <span>시맨틱 마크업</span>
-                  <span>IR&IS</span>
-                </div>
-                <p><em>TOOL</em>HTML5, CSS3</p>
-                <p><em>기여도</em>퍼블리싱100%</p>
-              </div>
-              <div class="btn-wrap cursor-scale btn-hover">
-                <button>WEB</button>
-                <button>Git</button>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="toy-proj">
-          <h3 class="abhaya toy-text">Toy Projects</h3>
-        </div>
-        <ul class="toy-content-wrap">
-          <li class="slide-up">
-            <a href="../oxquiz/"><img src="./img/oxquiz.png" alt="OX Quiz"></a>
-            <div class="bg-box">
-              <div class="txt">
-                <strong>OX Quiz</strong>
-                <div class="span">
-                  <span>#React</span>
-                  <span>#UX Design</span>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="slide-up">
-            <a href="../game"><img src="./img/game.png" alt="가위바위보 게임"></a>
-            <div class="bg-box">
-              <div class="txt">
-                <strong>가위바위보게임</strong>
-                <div class="span">
-                  <span>#React</span>
-                  <span>#UX Design</span>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="slide-up">
-            <a href="../stopwatch"><img src="./img/stopwatch.png" alt="스톱워치"></a>
-            <div class="bg-box">
-              <div class="txt">
-                <strong>Stopwatch</strong>
-                <div class="span">
-                  <span>#JavaScript</span>
-                  <span>#UX Design</span>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="slide-up">
-            <a><img src="./img/clock.png" alt="전자시계"></a>
-            <div class="bg-box">
-              <div class="txt">
-                <strong>전자시계</strong>
-                <div class="span">
-                  <span>#JavaScript</span>
-                  <span>#UX Design</span>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="slide-up">
-            <a><img src="./img/calculator.png" alt="계산기"></a>
-            <div class="bg-box">
-              <div class="txt">
-                <strong>계산기</strong>
-                <div class="span">
-                  <span>#JavaScript</span>
-                  <span>#UX Design</span>
-                </div>
-              </div>
-            </div>
-          </li>
-        </ul>
-        <div class="toy-pop">
-          <div class="iframe-wrap">
-            <iframe src="https://hyj9069.github.io/" frameborder="0"></iframe>
-            <button class="cursor-scale btn-hover"></button>
+    <script type="module" src="./js/main.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="cursor"><span class="img-cursor-txt">view</span></div>
+    <div class="wrap">
+      <header id="header">
+        <h1><a href="#">YEJI</a></h1>
+        <a href="#">CONTACT</a>
+      </header>
+      <main class="container">
+        <section class="intro-main">
+          <div class="title">
+            <span class="abhaya t1 cursor-scale">FRONT-END</span>
+            <span class="abhaya t2 cursor-scale">PUBLISHER</span>
+            <span class="abhaya t3 cursor-scale">PORTFOLIO</span>
           </div>
-          <div class="iframe-wrap">
-            <iframe src="" frameborder="0"></iframe>
-            <button class="cursor-scale btn-hover"></button>
+          <div class="orbit-content">
+            <div class="square blue"></div>
+            <svg style="position: relative" class="path" width="100%" height="100%" viewBox="0 0 888 310" fill="none">
+              <path
+                id="Ellipse 3"
+                d="M877.692 54.5999C881.351 70.5593 872.781 88.6556 853.838 107.769C834.915 126.862 805.748 146.854 768.518 166.571C694.065 206 587.466 244.273 466.374 272.029C345.281 299.786 232.655 311.763 148.461 308.698C106.36 307.165 71.3982 301.872 46.0484 292.927C20.6712 283.973 5.07575 271.416 1.41759 255.456C-2.24057 239.497 6.32862 221.401 25.2722 202.288C44.1954 183.195 73.3618 163.202 110.592 143.486C185.045 104.056 291.644 65.7838 412.737 38.0273C533.829 10.2708 646.455 -1.70639 730.649 1.35864C772.75 2.89129 807.712 8.18431 833.062 17.1289C858.439 26.0832 874.034 38.6405 877.692 54.5999Z"
+                stroke="#fff"
+                fill="none"
+                stroke-width="2"
+              />
+            </svg>
           </div>
-          <div class="iframe-wrap">
-            <iframe src="" frameborder="0"></iframe>
-            <button class="cursor-scale btn-hover"></button>
+        </section>
+        <section class="intro-sec">
+          <div class="flow-txt">
+            <span class="abhaya">ENJOYWHATYOUWANT</span>
+            <span class="abhaya">ENJOYWHATYOUWANT</span>
+            <span class="abhaya">ENJOYWHATYOUWANT</span>
           </div>
-         <div class="iframe-wrap">
-           <iframe src="" frameborder="0"></iframe>
-           <button class="cursor-scale btn-hover"></button>
-         </div>
-          <div class="iframe-wrap">
-            <iframe src="" frameborder="0"></iframe>
-            <button class="cursor-scale btn-hover"></button>
+          <strong class="split">WHO'RE YOU?</strong>
+          <p class="intro-txt cursor-scale small">
+            시멘틱 마크업을 통해 웹표준성과 웹접근성을 준수하고자 하며,<br />
+            <br />
+            Aenean massa magnis
+          </p>
+          <div class="scroll-down">
+            <span>scroll-down</span>
+            <span class="material-symbols-outlined"> keyboard_double_arrow_down </span>
           </div>
-        </div>
-      </section>
-      <section class="graphic">
-        <h2 class="split">GRAPHIC</h2>
-        <div class="swiper">
-          <div class="swiper-wrapper">
-            <div id="frame" class="swiper-slide">
-              <div id="card">
-                <div id="light"></div>
+        </section>
+        <section class="about">
+          <h2 class="split">ABOUT</h2>
+          <div class="content-wrap">
+            <div class="content-left">
+              <img src="./img/profile.png" alt="프로필사진" />
+              <div class="txt-wrap">
+                <span>한예지</span>
+                <span>1998.01.22</span>
+                <span>010-4174-9069</span>
+                <span>yeji9981@gmail.com</span>
+                <span>#열정 #빠른적응력 #끈기 #자기계발 </span>
               </div>
             </div>
-            <div id="frame" class="swiper-slide">
-              <div id="card">
-                <div id="light"></div>
+            <div class="content-right">
+              <div class="content license">
+                <h3>LICENSE</h3>
+                <span>GTQ(그래픽기술자격) 1급</span>
+                <span>컴퓨터활용능력 2급</span>
               </div>
-            </div>
-            <div id="frame" class="swiper-slide">
-              <div id="card">
-                <div id="light"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-      </section>
-      <div class="pop-up">
-        <img class="pop-img" src="./img/graphic1.jpg" alt="">
-        <img class="pop-img" src="./img/graphic2.png" alt="">
-        <button class="close-pop">
-          <span class="hide-txt">팝업닫기</span>
-        </button>
-      </div>
-      <section class="article">
-        <div class="content-left">
-          <h2 class="split">ARTICLE</h2>
-          <a href="#">
-            <span class="blog">블로그바로가기</span>
-            <span class="material-symbols-outlined">
-              arrow_outward
-            </span>
-          </a>
-        </div>
-        <div class="content-right">
-          <ul>
-            <li>
-              <a href="#">
-                <div class="txt-box">
-                  <span>Mar 18, 2024</span>
-                  <strong>[CSS] 가로로 흐르는 텍스트 구현하기</strong>
-                  <p>animation을 사용하여 텍스트가 왼쪽으로 무한히 흐르는 효과를 구현하기. html 구성 ENJOYWHATYOUWANT ENJOYWHATYOUWANT ENJOYWHATYOUWANT CSS구성
+              <div class="content education">
+                <h3>EDUCATION</h3>
+                <div>
+                  <span>2024.03</span>
+                  <p>
+                    이젠컴퓨터아카데미 <br />
+                    UI/UX웹디자인 웹퍼블리셔 프론트엔드 전문가 양성 과정<br />
+                    1003시간 수료
                   </p>
                 </div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div class="txt-box">
-                  <span>Feb 22, 2024</span>
-                  <strong>[React]UseState에 대해서 알아보기</strong>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, praesentium! Nam quaerat perspiciatis nulla quasi velit aperiam eaque qui accusantium et rerum ipsam provident aliquam vero, nostrum corrupti amet ullam.</p>
+                <div>
+                  <span>2024.02</span>
+                  <p>서울사이버대학교 멀티미디어디자인학과 전공</p>
                 </div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div class="txt-box">
-                  <span>Feb 05, 2024</span>
-                  <strong>[React]UseRef에 대해서 알아보기</strong>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, praesentium! Nam quaerat perspiciatis nulla quasi velit aperiam eaque qui accusantium et rerum ipsam provident aliquam vero, nostrum corrupti amet ullam.</p>
+                <div>
+                  <span>2023.02</span>
+                  <p>
+                    비개발자를 위한, 웹개발 종합반(프로그래밍 실무, 풀스텍)<br />
+                    88시간 수료
+                  </p>
                 </div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div class="txt-box">
-                  <span>Jan 22, 2024</span>
-                  <strong>React Hooks : useEffect() 함수</strong>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, praesentium! Nam quaerat perspiciatis nulla quasi velit aperiam eaque qui accusantium et rerum ipsam provident aliquam vero, nostrum corrupti amet ullam.</p>
+              </div>
+              <div class="content skills">
+                <h3>SKILLS</h3>
+                <img src="./img/photoshop.svg" alt="Photoshop" />
+                <img src="./img/illustrator.svg" alt="Illustrator" />
+                <img src="./img/html_logo.png" alt="HTML" />
+                <img src="./img/css_logo.png" alt="CSS" />
+                <img src="./img/js_logo.png" alt="JavaScript" />
+                <img src="./img/figma_logo 1.png" alt="figma" />
+                <img src="./img/git_logo.png" alt="Git" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="projects">
+          <div class="web-proj">
+            <h2 class="split">PROJECTS</h2>
+            <h3>WEB</h3>
+            <ul class="hashtag cursor-scale btn-hover">
+              <li class="active all" data-value="all"><button>#ALL</button></li>
+              <li class="renewal" data-value="renewal"><button>#리뉴얼코딩</button></li>
+              <li class="clone" data-value="clone"><button>#클론코딩</button></li>
+              <li class="responsive" data-value="responsive"><button>#반응형</button></li>
+              <li class="gsap" data-value="gsap"><button>#GSAP</button></li>
+            </ul>
+            <ul class="content-wrap">
+              <li class="item renewal responsive gsap">
+                <a href="./web/bosung/bosung.html" class="img-box cursor-scale img-hover" target="_blank"><img src="./img/ex_bg.jpg" alt="보성그룹 리뉴얼코딩" /></a>
+                <div class="txt-wrap cursor-scale small">
+                  <h4>보성그룹</h4>
+                  <div class="spec">
+                    <span>리뉴얼코딩</span>
+                    <span>반응형</span>
+                    <span>시맨틱마크업</span>
+                    <span>IR</span>
+                  </div>
+                  <p><em>TOOL</em>Figma, Photoshop, HTML5, CSS3, Javascript, jQuery</p>
+                  <p><em>기여도</em>디자인100% 퍼블리싱100%</p>
                 </div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div class="txt-box">
-                  <span>Jan 15, 2024</span>
-                  <strong>[React]component는 무엇인가</strong>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, praesentium! Nam quaerat perspiciatis nulla quasi velit aperiam eaque qui accusantium et rerum ipsam provident aliquam vero, nostrum corrupti amet ullam.</p>
+                <div class="btn-wrap cursor-scale btn-hover">
+                  <button>WEB</button>
+                  <button>Figma</button>
+                  <button>Git</button>
                 </div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div class="txt-box">
-                  <span>Jan 15, 2024</span>
-                  <strong>[React]component는 무엇인가</strong>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, praesentium! Nam quaerat perspiciatis nulla quasi velit aperiam eaque qui accusantium et rerum ipsam provident aliquam vero, nostrum corrupti amet ullam.</p>
+              </li>
+              <li class="item responsive clone">
+                <a href="./web/sealyKorea/index.html" class="img-box cursor-scale img-hover" target="_blank"><img src="./img/sealy.jpg" alt="씰리코리아 클론코딩" /></a>
+                <div class="txt-wrap cursor-scale small">
+                  <h4>SEALY KOREA</h4>
+                  <div class="spec">
+                    <span>클론코딩</span>
+                    <span>반응형</span>
+                    <span>시맨틱 마크업</span>
+                    <span>IR</span>
+                  </div>
+                  <p><em>TOOL</em>HTML5, CSS3, Javascript, jQuery</p>
+                  <p><em>기여도</em>퍼블리싱100%</p>
                 </div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div class="txt-box">
-                  <span>Jan 15, 2024</span>
-                  <strong>[React]component는 무엇인가</strong>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, praesentium! Nam quaerat perspiciatis nulla quasi velit aperiam eaque qui accusantium et rerum ipsam provident aliquam vero, nostrum corrupti amet ullam.</p>
+                <div class="btn-wrap cursor-scale btn-hover">
+                  <button>WEB</button>
+                  <button>Git</button>
                 </div>
-              </a>
+              </li>
+              <li class="item responsive clone">
+                <a href="./web/jiran/index.html" class="img-box cursor-scale img-hover" target="_blank"><img src="./img/jiran.png" alt="지란지교시큐리티 클론코딩" /></a>
+                <div class="txt-wrap cursor-scale small">
+                  <h4>지란지교시큐리티</h4>
+                  <div class="spec">
+                    <span>클론코딩</span>
+                    <span>반응형</span>
+                    <span>시맨틱 마크업</span>
+                    <span>IR</span>
+                  </div>
+                  <p><em>TOOL</em> HTML5, CSS3, Javascript, jQuery</p>
+                  <p><em>기여도</em>퍼블리싱100%</p>
+                </div>
+                <div class="btn-wrap cursor-scale btn-hover">
+                  <button>WEB</button>
+                  <button>Git</button>
+                </div>
+              </li>
+              <li class="item clone">
+                <a href="./web/navercorp/index.html" class="img-box cursor-scale img-hover" target="_blank"><img src="./img/navercorp.jpg" alt="NAVER Corp 클론코딩" /></a>
+                <div class="txt-wrap cursor-scale small">
+                  <h4>NAVER Corp</h4>
+                  <div class="spec">
+                    <span>클론코딩</span>
+                    <span>시맨틱 마크업</span>
+                    <span>IR&IS</span>
+                  </div>
+                  <p><em>TOOL</em>HTML5, CSS3, Javascript, jQuery</p>
+                  <p><em>기여도</em>퍼블리싱100%</p>
+                </div>
+                <div class="btn-wrap cursor-scale btn-hover">
+                  <button>WEB</button>
+                  <button>Git</button>
+                </div>
+              </li>
+              <li class="item clone">
+                <a href="./web/kjcareer/index.html" class="img-box cursor-scale img-hover" target="_blank"><img src="./img/kjcareer.png" alt="국제커리어센터 클론코딩" /></a>
+                <div class="txt-wrap cursor-scale small">
+                  <h4>국제커리어센터</h4>
+                  <div class="spec">
+                    <span>클론코딩</span>
+                    <span>시맨틱 마크업</span>
+                    <span>IR</span>
+                  </div>
+                  <p><em>TOOL</em>HTML5, CSS3, Javascript, jQuery</p>
+                  <p><em>기여도</em>퍼블리싱100%</p>
+                </div>
+                <div class="btn-wrap cursor-scale btn-hover">
+                  <button>WEB</button>
+                  <button>Git</button>
+                </div>
+              </li>
+              <li class="item clone">
+                <a href="#" class="img-box cursor-scale img-hover" target="_blank"><img src="./img/naver-img.png" alt="NAVER" /></a>
+                <div class="txt-wrap cursor-scale small">
+                  <h4>NAVER</h4>
+                  <div class="spec">
+                    <span>클론코딩</span>
+                    <span>시맨틱 마크업</span>
+                    <span>IR&IS</span>
+                  </div>
+                  <p><em>TOOL</em>HTML5, CSS3</p>
+                  <p><em>기여도</em>퍼블리싱100%</p>
+                </div>
+                <div class="btn-wrap cursor-scale btn-hover">
+                  <button>WEB</button>
+                  <button>Git</button>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="toy-proj">
+            <h3 class="abhaya toy-text">Toy Projects</h3>
+          </div>
+          <ul class="toy-content-wrap">
+            <li class="slide-up">
+              <a href="../리액트/oxquiz/"><img src="./img/oxquiz.png" alt="OX Quiz" /></a>
+              <div class="bg-box">
+                <div class="txt">
+                  <strong>OX Quiz</strong>
+                  <div class="span">
+                    <span>#React</span>
+                    <span>#UX Design</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="slide-up">
+              <a href="../리액트/game/"><img src="./img/game.png" alt="가위바위보 게임" /></a>
+              <div class="bg-box">
+                <div class="txt">
+                  <strong>가위바위보게임</strong>
+                  <div class="span">
+                    <span>#React</span>
+                    <span>#UX Design</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="slide-up">
+              <a href="../js_toy/stopwatch/"><img src="./img/stopwatch.png" alt="스톱워치" /></a>
+              <div class="bg-box">
+                <div class="txt">
+                  <strong>Stopwatch</strong>
+                  <div class="span">
+                    <span>#JavaScript</span>
+                    <span>#UX Design</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="slide-up">
+              <a href="../js_toy/clock/"><img src="./img/clock.png" alt="전자시계" /></a>
+              <div class="bg-box">
+                <div class="txt">
+                  <strong>전자시계</strong>
+                  <div class="span">
+                    <span>#JavaScript</span>
+                    <span>#UX Design</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="slide-up">
+              <a href="../js_toy/calculator/"><img src="./img/calculator.png" alt="계산기" /></a>
+              <div class="bg-box">
+                <div class="txt">
+                  <strong>계산기</strong>
+                  <div class="span">
+                    <span>#JavaScript</span>
+                    <span>#UX Design</span>
+                  </div>
+                </div>
+              </div>
             </li>
           </ul>
+          <div class="toy-pop">
+            <div class="iframe-wrap">
+              <iframe src="https://hyj9069.github.io/" frameborder="0"></iframe>
+              <button class="cursor-scale btn-hover"></button>
+            </div>
+            <div class="iframe-wrap">
+              <iframe src="" frameborder="0"></iframe>
+              <button class="cursor-scale btn-hover"></button>
+            </div>
+            <div class="iframe-wrap">
+              <iframe src="" frameborder="0"></iframe>
+              <button class="cursor-scale btn-hover"></button>
+            </div>
+            <div class="iframe-wrap">
+              <iframe src="" frameborder="0"></iframe>
+              <button class="cursor-scale btn-hover"></button>
+            </div>
+            <div class="iframe-wrap">
+              <iframe src="" frameborder="0"></iframe>
+              <button class="cursor-scale btn-hover"></button>
+            </div>
+          </div>
+        </section>
+        <section class="graphic">
+          <h2 class="split">GRAPHIC</h2>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div id="frame" class="swiper-slide">
+                <div id="card">
+                  <div id="light"></div>
+                </div>
+              </div>
+              <div id="frame" class="swiper-slide">
+                <div id="card">
+                  <div id="light"></div>
+                </div>
+              </div>
+              <div id="frame" class="swiper-slide">
+                <div id="card">
+                  <div id="light"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </section>
+        <div class="pop-up">
+          <img class="pop-img" src="./img/graphic1.jpg" alt="" />
+          <img class="pop-img" src="./img/graphic2.png" alt="" />
+          <button class="close-pop">
+            <span class="hide-txt">팝업닫기</span>
+          </button>
         </div>
-      </section>
-      <section class="goal">
-        <h2 class="split">GOAL</h2>
-        <div class="txt-wrap">
-          <div class="wrap-txt">
-           <div class="word slide-up">
-             <span class="s-l">성실</span>
-           </div>
+        <section class="article">
+          <div class="content-left">
+            <h2 class="split">ARTICLE</h2>
+            <a href="#">
+              <span class="blog">블로그바로가기</span>
+              <span class="material-symbols-outlined"> arrow_outward </span>
+            </a>
           </div>
-          <div class="wrap-txt">
-            <div class="word slide-right">
-              <span class="s-m">JavaScript</span>
+          <div class="content-right">
+            <ul>
+              <li>
+                <a href="#">
+                  <div class="txt-box">
+                    <span>Mar 18, 2024</span>
+                    <strong>[CSS] 가로로 흐르는 텍스트 구현하기</strong>
+                    <p>animation을 사용하여 텍스트가 왼쪽으로 무한히 흐르는 효과를 구현하기. html 구성 ENJOYWHATYOUWANT ENJOYWHATYOUWANT ENJOYWHATYOUWANT CSS구성</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="txt-box">
+                    <span>Feb 22, 2024</span>
+                    <strong>[React]UseState에 대해서 알아보기</strong>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, praesentium! Nam quaerat perspiciatis nulla quasi velit aperiam eaque qui accusantium et rerum ipsam provident
+                      aliquam vero, nostrum corrupti amet ullam.
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="txt-box">
+                    <span>Feb 05, 2024</span>
+                    <strong>[React]UseRef에 대해서 알아보기</strong>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, praesentium! Nam quaerat perspiciatis nulla quasi velit aperiam eaque qui accusantium et rerum ipsam provident
+                      aliquam vero, nostrum corrupti amet ullam.
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="txt-box">
+                    <span>Jan 22, 2024</span>
+                    <strong>React Hooks : useEffect() 함수</strong>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, praesentium! Nam quaerat perspiciatis nulla quasi velit aperiam eaque qui accusantium et rerum ipsam provident
+                      aliquam vero, nostrum corrupti amet ullam.
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="txt-box">
+                    <span>Jan 15, 2024</span>
+                    <strong>[React]component는 무엇인가</strong>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, praesentium! Nam quaerat perspiciatis nulla quasi velit aperiam eaque qui accusantium et rerum ipsam provident
+                      aliquam vero, nostrum corrupti amet ullam.
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="txt-box">
+                    <span>Jan 15, 2024</span>
+                    <strong>[React]component는 무엇인가</strong>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, praesentium! Nam quaerat perspiciatis nulla quasi velit aperiam eaque qui accusantium et rerum ipsam provident
+                      aliquam vero, nostrum corrupti amet ullam.
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="txt-box">
+                    <span>Jan 15, 2024</span>
+                    <strong>[React]component는 무엇인가</strong>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, praesentium! Nam quaerat perspiciatis nulla quasi velit aperiam eaque qui accusantium et rerum ipsam provident
+                      aliquam vero, nostrum corrupti amet ullam.
+                    </p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="goal">
+          <h2 class="split">GOAL</h2>
+          <div class="txt-wrap">
+            <div class="wrap-txt">
+              <div class="word slide-up">
+                <span class="s-l">성실</span>
+              </div>
+            </div>
+            <div class="wrap-txt">
+              <div class="word slide-right">
+                <span class="s-m">JavaScript</span>
+              </div>
+            </div>
+            <div class="wrap-txt">
+              <div class="word small">
+                <span class="s-s scale-motion split-word">성</span>
+                <span class="s-s scale-motion split-word">장</span>
+              </div>
+            </div>
+            <div class="wrap-txt">
+              <div class="word slide-down">
+                <span class="s-l">jQery</span>
+              </div>
+            </div>
+            <div class="wrap-txt">
+              <div class="word small slide-up">
+                <span class="s-s">감각</span>
+              </div>
+            </div>
+            <div class="wrap-txt">
+              <div class="word slide-left">
+                <span class="s-l">Next.js</span>
+              </div>
+            </div>
+            <div class="wrap-txt">
+              <div class="word slide-left">
+                <span class="s-l">웹접근성</span>
+              </div>
+            </div>
+            <div class="wrap-txt">
+              <div class="word slide-down">
+                <span class="s-m">TypeScript</span>
+              </div>
+            </div>
+            <div class="wrap-txt">
+              <div class="word">
+                <span class="s-l scale-motion split-word">소</span>
+                <span class="s-l scale-motion split-word">통</span>
+              </div>
+            </div>
+            <div class="wrap-txt">
+              <div class="word small slide-up">
+                <span class="s-s">React</span>
+              </div>
+            </div>
+            <div class="wrap-txt">
+              <div class="word slide-down">
+                <span class="s-l">트렌드</span>
+              </div>
+            </div>
+            <div class="wrap-txt">
+              <div class="word small">
+                <span class="s-s scale-motion split-word">H</span>
+                <span class="s-s scale-motion split-word">T</span>
+                <span class="s-s scale-motion split-word">M</span>
+                <span class="s-s scale-motion split-word">L</span>
+              </div>
+            </div>
+            <div class="wrap-txt">
+              <div class="word slide-right">
+                <span class="s-s">CSS</span>
+              </div>
+            </div>
+            <div class="wrap-txt">
+              <div class="word">
+                <span class="s-l scale-motion split-word">책</span>
+                <span class="s-l scale-motion split-word">임</span>
+                <span class="s-l scale-motion split-word">감</span>
+              </div>
+            </div>
+            <div class="wrap-txt">
+              <div class="word small slide-right">
+                <span class="s-s">SCSS</span>
+              </div>
+            </div>
+            <div class="wrap-txt">
+              <div class="word small">
+                <span class="s-m slide-down">Redux</span>
+              </div>
+            </div>
+            <div class="wrap-txt">
+              <div class="word">
+                <span class="s-l slide-left">INTERACTION</span>
+              </div>
             </div>
           </div>
-         <div class="wrap-txt">
-           <div class="word small">
-             <span class="s-s scale-motion split-word">성</span>
-             <span class="s-s scale-motion split-word">장</span>
-           </div>
-         </div>
-          <div class="wrap-txt">
-            <div class="word slide-down">
-              <span class="s-l">jQery</span>
-            </div>
-          </div>
-          <div class="wrap-txt">
-            <div class="word small slide-up">
-              <span class="s-s">감각</span>
-            </div>
-          </div>
-         <div class="wrap-txt">
-           <div class="word slide-left">
-             <span class="s-l ">Next.js</span>
-           </div>
-         </div>
-          <div class="wrap-txt">
-            <div class="word slide-left">
-              <span class="s-l">웹접근성</span>
-            </div>
-          </div>
-          <div class="wrap-txt">
-            <div class="word slide-down">
-              <span class="s-m">TypeScript</span>
-            </div>
-          </div>
-          <div class="wrap-txt">
-            <div class="word">
-              <span class="s-l scale-motion split-word">소</span>
-              <span class="s-l scale-motion split-word">통</span>
-            </div>
-          </div>
-          <div class="wrap-txt">
-            <div class="word small slide-up">
-              <span class="s-s">React</span>
-            </div>
-          </div>
-          <div class="wrap-txt">
-            <div class="word slide-down">
-              <span class="s-l">트렌드</span>
-            </div>
-          </div>
-          <div class="wrap-txt">
-            <div class="word small">
-              <span class="s-s scale-motion split-word">H</span>
-              <span class="s-s scale-motion split-word">T</span>
-              <span class="s-s scale-motion split-word">M</span>
-              <span class="s-s scale-motion split-word">L</span>
-            </div>
-          </div>
-          <div class="wrap-txt">
-            <div class="word slide-right">
-              <span class="s-s">CSS</span>
-            </div>
-          </div>
-          <div class="wrap-txt"> 
-            <div class="word">
-              <span class="s-l scale-motion split-word">책</span>
-              <span class="s-l scale-motion split-word">임</span>
-              <span class="s-l scale-motion split-word">감</span>
-            </div>
-          </div>
-          <div class="wrap-txt">
-            <div class="word small slide-right">
-              <span class="s-s">SCSS</span>
-            </div>
-          </div>
-          <div class="wrap-txt"> 
-            <div class="word small">
-              <span class="s-m slide-down">Redux</span>
-            </div>
-          </div>
-          <div class="wrap-txt">
-            <div class="word">
-              <span class="s-l slide-left">INTERACTION</span>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="contact"></section>
-    </main>
-  </div>
-  
-</body>
+        </section>
+        <section class="contact"></section>
+      </main>
+    </div>
+  </body>
 </html>

@@ -12,7 +12,9 @@ $(function() {
   });
 
   $('.btn_sitemap').click(function() {
-  $('.sitemap').toggle()
+    $('h1').toggleClass('on');
+    $(this).toggleClass('active'); 
+    $('.sitemap').toggle()
   })
 
   $('.ads .vod_area li').click(function() {
