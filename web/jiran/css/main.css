@@ -604,7 +604,7 @@ body {
 /* end */
 /* movie_wrap */
 #main .movie_wrap {
-  background: #fff6f4 url(/img/bg_video.png) no-repeat;
+  background: #fff6f4 url(../img/bg_video.png) no-repeat;
 }
 #main .movie_wrap .inner {
   display: flex;
@@ -640,7 +640,7 @@ body {
 #main .movie_wrap .inner .mov_vod {
   padding-top: 56%;
   width: 100%;
-  background: url(/img/mov_vod.webp) no-repeat;
+  background: url(../img/mov_vod.webp) no-repeat;
   background-size: contain;
 }
 #main .movie_wrap .inner .mov_vod iframe {
@@ -815,7 +815,7 @@ body {
 #footer .family_site_box select {
   padding: 10px 15px;
   width: 170px;
-  background: url(./img/ico-footer-familysite-on.png) no-repeat;
+  background: url(../img/ico-footer-familysite-on.png) no-repeat;
   background-position: 95% 50%;
   appearance: none;
 }
