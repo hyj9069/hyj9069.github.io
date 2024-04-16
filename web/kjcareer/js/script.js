@@ -11,6 +11,18 @@ $(function () {
     },
   });
 
+  let swiper2 = new Swiper(".swiper.content_slide", {
+    slidesPerView: 2,
+    spaceBetween: 20,
+    // autoplay: {
+    //   delay: 5000,
+    //   disableOnInteraction: false,
+    // },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
   $(".center_list .tabs li").click(function () {
     let n = $(this).index();
 

@@ -160,7 +160,6 @@ main .section .content_txt3 p {
 }
 main .section .content_slide .slide_track {
   display: flex;
-  gap: 20px;
 }
 main .section .content_slide .slide_box {
   padding: 35px;
@@ -176,23 +175,6 @@ main .section .content_slide .card_name {
 }
 main .section .content_slide .card_name img {
   height: 100%;
-}
-main .section .slide_btn {
-  display: flex;
-  gap: 10px;
-  margin-top: 20px;
-}
-main .section .slide_btn button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid #fff;
-  width: 47px;
-  height: 47px;
-  border-radius: 50%;
-}
-main .section .slide_btn button .disable {
-  opacity: 0.4;
 }
 main .btns {
   display: flex;
@@ -316,9 +298,11 @@ main .business5 .btn_lnk {
 }
 /* //////////////////// */
 /* business2 */
-main .business2 {
+main .section.business2 {
   background: #2071f8;
   color: #fff;
+  height: auto;
+  padding: 100px 0;
 }
 
 main .business2 .inner::before {
@@ -352,6 +336,7 @@ main .business2 .content_txt2 span {
   font-weight: 300;
 }
 main .business2 .content_box .content_right {
+  position: relative;
   width: 820px;
 }
 main .business2 .content_slide .card_name {
@@ -364,7 +349,7 @@ main .business2 .content_slide .slide_box strong {
   font-size: 26px;
   font-weight: 800;
 }
-main .business2 .content_slide .slide_box p {
+main .content_slide .slide_box p {
   margin-bottom: 70px;
   line-height: 22px;
 }
@@ -372,7 +357,28 @@ main .business2 .btn_lnk {
   top: 0;
   right: 0;
 }
-
+main .slide_btn {
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+}
+main .section .slide_btn .swiper-btn {
+  border: 2px solid #fff;
+  width: 47px;
+  height: 47px;
+  border-radius: 50%;
+}
+main .section .slide_btn .swiper-btn span {
+  color: #fff;
+}
+main .section .slide_btn .swiper-button-next {
+  left: auto;
+  right: 0;
+}
+main .section .slide_btn .swiper-button-prev {
+  left: auto;
+  right: 57px;
+}
 /* business3 */
 main .business3 .content_box {
   position: relative;
@@ -380,6 +386,7 @@ main .business3 .content_box {
 main .business3 .content_box::before {
   display: block;
   position: absolute;
+  right: 0;
   bottom: 0;
   z-index: -1;
   background: url(../img/main_sec04.png) no-repeat center/contain;
@@ -456,20 +463,28 @@ main .business5 .content_slide .slide_box strong {
   font-size: 24px;
   font-weight: 600;
   text-overflow: ellipsis;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
 }
 main .business5 .content_slide .slide_box p {
   margin-bottom: 70px;
   font-size: 18px;
   color: #808080;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 main .business5 .content_slide .card_txt > span {
   font-size: 16px;
   font-weight: 600;
 }
-main .business5 .slide_btn button {
-  border-color: #727272;
+main .business5 .slide_btn .swiper-btn {
+  border: 1px solid #727272;
+}
+main .business5 .slide_btn .swiper-btn span {
+  color: #727272;
 }
 main .business5 .btn_lnk {
   padding: 10px 18px;
@@ -710,8 +725,6 @@ main .business4 .btns .btn_bg2 {
     font-size: 54px;
   }
   main .section .content_slide .slide_track {
-    display: flex;
-    gap: 20px;
     width: 2520px;
   }
   main .section .content_slide .card_name {
