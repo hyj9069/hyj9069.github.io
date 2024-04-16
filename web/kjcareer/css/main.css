@@ -48,7 +48,7 @@ header h1 a {
   display: block;
   width: 180px;
   height: 31px;
-  background: url(/img/logo.png) no-repeat;
+  background: url(../img/logo.png) no-repeat;
   background-size: contain;
   transition: all 0.3s;
 }
