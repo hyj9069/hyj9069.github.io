@@ -84,11 +84,11 @@ header h1 a {
   display: inline-block;
   width: 100%;
   height: 100%;
-  background-image: url(/img/common/header_logo.png);
+  background-image: url(./img/common/header_logo.png);
 }
 header h1.on a {
   background: #fff;
-  mask-image: url(/img/common/header_logo.png);
+  mask-image: url(./img/common/header_logo.png);
 }
 header #gnb {
   display: flex;
@@ -108,7 +108,7 @@ header #gnb > li:last-child > a::before {
   right: 0;
   width: 18px;
   height: 18px;
-  background: url(/navercorp/img/common/sprite.png) no-repeat -59px 0;
+  background: url(./img/common/sprite.png) no-repeat -59px 0;
   background-size: 474px 1600px;
   transition: all 0.2s;
   content: '';
@@ -342,7 +342,7 @@ footer .family_site > button::before {
   right: 0;
   width: 16px;
   height: 16px;
-  background: url(/navercorp/img/common/sprite.png) no-repeat;
+  background: url(./img/common/sprite.png) no-repeat;
   background-position: -222px -26px;
   background-size: 474px 1600px;
   content: '';
@@ -372,7 +372,7 @@ footer .family_site .hide a::before {
   right: 0;
   width: 18px;
   height: 18px;
-  background: url(/navercorp/img/common/sprite.png) no-repeat;
+  background: url(./img/common/sprite.png) no-repeat;
   background-position: -104px -68px;
   background-size: 474px 1600px;
   content: '';
@@ -407,7 +407,7 @@ footer .copyright {
 #main_content .main_visual .visual_slider .slide_item {
   padding-top: 39.895%;
   position: relative;
-  background: url(/img/main/img_main_slide12.jpg);
+  background: url(./img/main/img_main_slide12.jpg);
   background-size: cover;
 }
 #main_content .main_visual .slide_txt {
@@ -587,7 +587,7 @@ footer .copyright {
   margin-bottom: 30px;
   width: 23px;
   height: 23px;
-  background: url(/navercorp/img/common/sprite.png) -199px -129px;
+  background: url(./img/common/sprite.png) no-repeat -199px -129px;
   content: '';
 }
 #main_content .content_service .service_txt strong {
@@ -643,7 +643,7 @@ footer .copyright {
   top: 0;
   left: 50%;
   height: 100px;
-  background-image: url(img/common/sprite.png);
+  background-image: url(./img/common/sprite.png);
   background-repeat: no-repeat;
   background-size: 474px 1600px;
   content: '';
