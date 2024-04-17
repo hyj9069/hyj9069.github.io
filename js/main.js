@@ -158,13 +158,7 @@ $(document).ready(function () {
           scrub: 1, //반대로 스크롤 할 때도 애니메이션 반대로 적용할지
         },
       });
-      a1.addLabel("a")
-        .to(".intro-main .title span:nth-of-type(even)", { xPercent: 100 }, "a")
-        .to(
-          ".intro-main .title span:nth-of-type(odd)",
-          { xPercent: -100 },
-          "a"
-        );
+      a1.addLabel("a").to(".intro-main .title span:nth-of-type(even)", { xPercent: 100 }, "a").to(".intro-main .title span:nth-of-type(odd)", { xPercent: -100 }, "a");
       a1.scrollTrigger.refresh();
       // intro  main 백그라운드 색상변경
       gsap.timeline({
@@ -264,18 +258,18 @@ $(document).ready(function () {
       // toy-item iframe pop-up
       let toyItem = $(".toy-content-wrap .slide-up");
       let iframe = $(".toy-pop iframe");
-      let iframeClo = $('.iframe-wrap button');
+      let iframeClo = $(".iframe-wrap button");
       toyItem.click(function () {
         let toyIndex = $(this).index();
         let showIframe = iframe[toyIndex];
-        let iframeWrap = $('.iframe-wrap')[toyIndex]
+        let iframeWrap = $(".iframe-wrap")[toyIndex];
         showIframe.style.opacity = "1";
-        iframeWrap.style.display = "block"
+        iframeWrap.style.display = "block";
       });
-      iframeClo.click(function() {
-        iframe.css({opacity: '0'})
+      iframeClo.click(function () {
+        iframe.css({ opacity: "0" });
         iframeWrap.css({ display: "none" });
-      })
+      });
       //.goal .txt
       gsap.timeline({
         scrollTrigger: {
@@ -377,5 +371,3 @@ window.addEventListener("resize", () => {
   width = rect.width;
   height = rect.height;
 });
-
-
