@@ -145,8 +145,8 @@ $(document).ready(function () {
     // desktop
     "(min-width: 480px)": function () {
       //intro-main 텍스트
-      gsap.from(".intro-main .title span:nth-of-type(odd)", { xPercent: -100 });
-      gsap.from(".intro-main .title span:nth-of-type(even)", { xPercent: 100 });
+      // gsap.from(".intro-main .title span:nth-of-type(odd)", { xPercent: -100 });
+      // gsap.from(".intro-main .title span:nth-of-type(even)", { xPercent: 100 });
 
       const a1 = gsap.timeline({
         scrollTrigger: {
@@ -319,55 +319,64 @@ $(document).ready(function () {
 // 그래픽 슬라이드
 const swiper = new Swiper(".swiper", {
   direction: "horizontal",
-  slidesPerView: 2,
-  spaceBetween: 100,
+  slidesPerView: 1,
+  spaceBetween: 30,
   navigation: {
     prevEl: ".swiper-button-prev",
     nextEl: ".swiper-button-next",
   },
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+    },
+    1080: {
+      slidesPerView: 2,
+      spaceBetween: 100,
+    },
+  },
 });
 //그래픽 3d 효과
-const frame = document.getElementById("frame");
-const card = document.getElementById("card");
-const light = document.getElementById("light");
+// const frame = document.getElementById("frame");
+// const card = document.getElementById("card");
+// const light = document.getElementById("light");
 
-let { x, y, width, height } = frame.getBoundingClientRect();
+// let { x, y, width, height } = frame.getBoundingClientRect();
 
-function mouseMove(e) {
-  const left = e.clientX - x;
-  const top = e.clientY - y;
-  const centerX = left - width / 2;
-  const centerY = top - height / 2;
-  const d = Math.sqrt(centerX ** 2 + centerY ** 2);
+// function mouseMove(e) {
+//   const left = e.clientX - x;
+//   const top = e.clientY - y;
+//   const centerX = left - width / 2;
+//   const centerY = top - height / 2;
+//   const d = Math.sqrt(centerX ** 2 + centerY ** 2);
 
-  card.style.boxShadow = `
-      ${-centerX / 5}px ${-centerY / 10}px 10px rgba(0, 0, 0, 0.2)
-    `;
+//   card.style.boxShadow = `
+//       ${-centerX / 5}px ${-centerY / 10}px 10px rgba(0, 0, 0, 0.2)
+//     `;
 
-  card.style.transform = `
-      rotate3d(${-centerY / 100}, ${centerX / 100}, 0, ${d / 8}deg)
-    `;
+//   card.style.transform = `
+//       rotate3d(${-centerY / 100}, ${centerX / 100}, 0, ${d / 8}deg)
+//     `;
 
-  light.style.backgroundImage = `
-      radial-gradient(circle at ${left}px ${top}px, #00000040, #ffffff00, #ffffff99)
-      `;
-}
+//   light.style.backgroundImage = `
+//       radial-gradient(circle at ${left}px ${top}px, #00000040, #ffffff00, #ffffff99)
+//       `;
+// }
 
-frame.addEventListener("mouseenter", () => {
-  frame.addEventListener("mousemove", mouseMove);
-});
+// frame.addEventListener("mouseenter", () => {
+//   frame.addEventListener("mousemove", mouseMove);
+// });
 
-frame.addEventListener("mouseleave", () => {
-  frame.removeEventListener("mousemove", mouseMove);
-  card.style.boxShadow = "";
-  card.style.transform = "";
-  light.style.backgroundImage = "";
-});
+// frame.addEventListener("mouseleave", () => {
+//   frame.removeEventListener("mousemove", mouseMove);
+//   card.style.boxShadow = "";
+//   card.style.transform = "";
+//   light.style.backgroundImage = "";
+// });
 
-window.addEventListener("resize", () => {
-  rect = frame.getBoundingClientRect();
-  x = rect.x;
-  y = rect.y;
-  width = rect.width;
-  height = rect.height;
-});
+// window.addEventListener("resize", () => {
+//   rect = frame.getBoundingClientRect();
+//   x = rect.x;
+//   y = rect.y;
+//   width = rect.width;
+//   height = rect.height;
+// });
