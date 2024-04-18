@@ -117,7 +117,11 @@ section {
 section > .slide-wrap {
   overflow: hidden;
 }
-section > .slide-wrap.txt-motion .slide-up {
+.about .txt-motion {
+  overflow: hidden;
+}
+section > .slide-wrap.txt-motion .slide-up,
+.about .txt-motion .slide-up {
   animation-name: slide-up;
   animation-duration: 0.5s;
   animation-timing-function: linear;
@@ -332,6 +336,7 @@ section.about {
 .about .content-left {
   margin-right: 100px;
   position: relative;
+  overflow: hidden;
 }
 .about .content-left::after {
   display: block;
@@ -343,6 +348,9 @@ section.about {
   background: #d9d9d9;
   content: "";
 }
+.about .content-left .img_box {
+  overflow: hidden;
+}
 .about .content-left img {
   display: block;
   overflow: hidden;
@@ -351,12 +359,14 @@ section.about {
   height: 300px;
   object-fit: cover;
   border-radius: 30px;
+  transform: translateY(100%);
 }
 .about .content-left .txt-wrap {
   display: flex;
   gap: 8px;
   flex-direction: column;
   margin-top: 20px;
+  transform: translateY(100%);
 }
 .about .content-left .txt-wrap span {
   display: inline-block;
@@ -370,9 +380,15 @@ section.about {
 }
 .about .content-right {
   margin-left: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-.about .content-right .content:not(:first-child) {
-  margin-top: 30px;
+.about .content-right .slide-wrap {
+  overflow: hidden;
+}
+.about .content-right .slide-wrap .content {
+  transform: translateY(100%);
 }
 .about .content-right h3 {
   margin-bottom: 25px;
@@ -479,7 +495,7 @@ section.projects.active {
 .projects .web-proj .content-wrap li {
   position: static !important;
 }
-.projects .web-proj .content-wrap li a {
+.projects .web-proj .content-wrap li > a {
   display: block;
   padding-bottom: 60%;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
@@ -503,7 +519,7 @@ section.projects.active {
   object-position: top 0 right -50px;
 }
 .projects .web-proj .txt-wrap {
-  padding: 20px 0 15px;
+  padding: 20px 0;
 }
 .projects .web-proj .txt-wrap h4 {
   margin-bottom: 10px;
@@ -530,17 +546,17 @@ section.projects.active {
   font-weight: 600;
 }
 .projects .web-proj .btn-wrap {
-  display: inline-block;
+  display: flex;
+  gap: 7px;
 }
-.projects .web-proj .btn-wrap button {
-  margin-right: 5px;
+.projects .web-proj .btn-wrap a {
   padding: 7px 12px;
   border: 1px solid #d9d9d9;
   background: #fbf3f3;
   font-size: 12px;
   border-radius: 15px;
 }
-.projects .web-proj .btn-wrap button:hover {
+.projects .web-proj .btn-wrap a:hover {
   background: #000;
   color: #fff;
   transition: all.5s;
@@ -707,6 +723,12 @@ section.projects.active {
 }
 .graphic .swiper-btn {
   color: var(--point-color);
+}
+.swiper-button-prev {
+  left: 3%;
+}
+.swiper-button-next {
+  right: 3%;
 }
 /* 팝업 */
 .pop-up {
@@ -1063,6 +1085,7 @@ section.goal {
 /* contact */
 section.contact {
   position: relative;
+  overflow: hidden;
 }
 .contact .content-box {
   display: flex;
@@ -1157,7 +1180,22 @@ section.contact {
     font-size: 0.5rem;
   }
 }
-/* tab2 ~ tab1 공통 */
+/* ~tab2 */
+@media screen and (max-width: 1279px) {
+  section.contact {
+    display: flex;
+    align-items: center;
+  }
+  .contact::after {
+    top: 20%;
+    bottom: auto;
+  }
+  .contact .content-box .l_cont {
+    justify-content: center;
+    margin-top: 0;
+  }
+}
+/* tab1 ~ tab2 공통 */
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   /* article */
   .article .content-left h2 {
@@ -1276,7 +1314,13 @@ section.contact {
   .graphic .swiper {
     width: 60%;
   }
-  /* goal */
+  /* contact */
+  .contact .content-box .l_cont {
+    height: 15rem;
+  }
+  .contact .content-box .l_cont strong span {
+    font-size: 20rem;
+  }
 }
 /* mob ~ tab2 공통 */
 @media screen and (max-width: 1023px) {
@@ -1414,6 +1458,13 @@ section.contact {
   .goal .txt-wrap .s-l {
     font-size: 3.5rem;
   }
+  /* contact */
+  .contact .content-box .l_cont {
+    height: 12rem;
+  }
+  .contact .content-box .l_cont strong span {
+    font-size: 16rem;
+  }
 }
 /* mob */
 @media screen and (max-width: 768px) {
@@ -1509,7 +1560,7 @@ section.contact {
   /* about */
   .about .content-wrap {
     flex-direction: column;
-    margin-top: 30px;
+    margin-top: 77px;
   }
   .about .content-left {
     display: flex;
@@ -1707,5 +1758,24 @@ section.contact {
   }
   .goal .txt-wrap .s-s {
     font-size: 2rem;
+  }
+  /* contact */
+  .contact::after {
+    top: 30%;
+  }
+  .contact .content-box .l_cont {
+    height: 9rem;
+  }
+  .contact .content-box .l_cont strong span {
+    font-size: 14rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  /* contact */
+  .contact .content-box .l_cont {
+    height: 7rem;
+  }
+  .contact .content-box .l_cont strong span {
+    font-size: 10rem;
   }
 }

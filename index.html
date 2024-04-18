@@ -83,52 +83,62 @@
           <h2 class="split">ABOUT</h2>
           <div class="content-wrap">
             <div class="content-left">
-              <img src="./img/profile.jpg" alt="프로필사진" />
-              <div class="txt-wrap">
-                <span>한예지</span>
-                <span>1998.01.22</span>
-                <span>010-4174-9069</span>
-                <span>yeji9981@gmail.com</span>
-                <span>#열정 #빠른적응력 #끈기 #자기계발 </span>
+              <div class="img_box">
+                <img class="slide-up" src="./img/profile.jpg" alt="프로필사진" />
+              </div>
+              <div class="txt-slide">
+                <div class="txt-wrap slide-up">
+                  <span>한예지</span>
+                  <span>1998.01.22</span>
+                  <span>010-4174-9069</span>
+                  <span>yeji9981@gmail.com</span>
+                  <span>#열정 #빠른적응력 #끈기 #자기계발 </span>
+                </div>
               </div>
             </div>
             <div class="content-right">
-              <div class="content license">
-                <h3>LICENSE</h3>
-                <span>GTQ(그래픽기술자격) 1급</span>
-                <span>컴퓨터활용능력 2급</span>
-              </div>
-              <div class="content education">
-                <h3>EDUCATION</h3>
-                <div>
-                  <span>2024.03</span>
-                  <p>
-                    이젠컴퓨터아카데미 <br />
-                    UI/UX웹디자인 웹퍼블리셔 프론트엔드 전문가 양성 과정<br />
-                    1003시간 수료
-                  </p>
-                </div>
-                <div>
-                  <span>2024.02</span>
-                  <p>서울사이버대학교 멀티미디어디자인학과 전공</p>
-                </div>
-                <div>
-                  <span>2023.02</span>
-                  <p>
-                    비개발자를 위한, 웹개발 종합반(프로그래밍 실무, 풀스텍)<br />
-                    88시간 수료
-                  </p>
+              <div class="slide-wrap">
+                <div class="content license slide-up">
+                  <h3>LICENSE</h3>
+                  <span>GTQ(그래픽기술자격) 1급</span>
+                  <span>컴퓨터활용능력 2급</span>
                 </div>
               </div>
-              <div class="content skills">
-                <h3>SKILLS</h3>
-                <img src="./img/photoshop.svg" alt="Photoshop" />
-                <img src="./img/illustrator.svg" alt="Illustrator" />
-                <img src="./img/html_logo.png" alt="HTML" />
-                <img src="./img/css_logo.png" alt="CSS" />
-                <img src="./img/js_logo.png" alt="JavaScript" />
-                <img src="./img/figma_logo 1.png" alt="figma" />
-                <img src="./img/git_logo.png" alt="Git" />
+              <div class="slide-wrap">
+                <div class="content education slide-up">
+                  <h3>EDUCATION</h3>
+                  <div>
+                    <span>2024.03</span>
+                    <p>
+                      이젠컴퓨터아카데미 <br />
+                      UI/UX웹디자인 웹퍼블리셔 프론트엔드 전문가 양성 과정<br />
+                      1003시간 수료
+                    </p>
+                  </div>
+                  <div>
+                    <span>2024.02</span>
+                    <p>서울사이버대학교 멀티미디어디자인학과 전공</p>
+                  </div>
+                  <div>
+                    <span>2023.02</span>
+                    <p>
+                      비개발자를 위한, 웹개발 종합반(프로그래밍 실무, 풀스텍)<br />
+                      88시간 수료
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="slide-wrap">
+                <div class="content skills slide-up">
+                  <h3>SKILLS</h3>
+                  <img src="./img/photoshop.svg" alt="Photoshop" />
+                  <img src="./img/illustrator.svg" alt="Illustrator" />
+                  <img src="./img/html_logo.png" alt="HTML" />
+                  <img src="./img/css_logo.png" alt="CSS" />
+                  <img src="./img/js_logo.png" alt="JavaScript" />
+                  <img src="./img/figma_logo 1.png" alt="figma" />
+                  <img src="./img/git_logo.png" alt="Git" />
+                </div>
               </div>
             </div>
           </div>
@@ -144,7 +154,7 @@
               <li class="responsive" data-value="responsive"><button>#반응형</button></li>
             </ul>
             <ul class="content-wrap">
-              <li class="item renewal responsive gsap">
+              <li class="item renewal responsive">
                 <a href="./web/bosung/bosung.html" class="img-box cursor-scale img-hover" target="_blank"><img src="./img/ex_bg.jpg" alt="보성그룹 리뉴얼코딩" /></a>
                 <div class="txt-wrap cursor-scale small">
                   <h4>보성그룹</h4>
@@ -158,9 +168,15 @@
                   <p><em>기여도</em>디자인100% 퍼블리싱100%</p>
                 </div>
                 <div class="btn-wrap cursor-scale btn-hover">
-                  <button>WEB</button>
-                  <button>Figma</button>
-                  <button>Git</button>
+                  <a href="./web/bosung/bosung.html">
+                    <button>WEB</button>
+                  </a>
+                  <a href="#">
+                    <button>Figma</button>
+                  </a>
+                  <a href="https://github.com/hyj9069/hyj9069.github.io/tree/main/web/bosung">
+                    <button>Git</button>
+                  </a>
                 </div>
               </li>
               <li class="item responsive clone">
@@ -177,8 +193,12 @@
                   <p><em>기여도</em>퍼블리싱100%</p>
                 </div>
                 <div class="btn-wrap cursor-scale btn-hover">
-                  <button>WEB</button>
-                  <button>Git</button>
+                  <a href="./web/sealykorea/sealy.html">
+                    <button>WEB</button>
+                  </a>
+                  <a href="https://github.com/hyj9069/hyj9069.github.io/tree/main/web/sealykorea">
+                    <button>Git</button>
+                  </a>
                 </div>
               </li>
               <li class="item responsive clone">
@@ -195,8 +215,12 @@
                   <p><em>기여도</em>퍼블리싱100%</p>
                 </div>
                 <div class="btn-wrap cursor-scale btn-hover">
-                  <button>WEB</button>
-                  <button>Git</button>
+                  <a href="./web/jiran/index.html">
+                    <button>WEB</button>
+                  </a>
+                  <a href="https://github.com/hyj9069/hyj9069.github.io/tree/main/web/jiran">
+                    <button>Git</button>
+                  </a>
                 </div>
               </li>
               <li class="item clone">
@@ -212,8 +236,12 @@
                   <p><em>기여도</em>퍼블리싱100%</p>
                 </div>
                 <div class="btn-wrap cursor-scale btn-hover">
-                  <button>WEB</button>
-                  <button>Git</button>
+                  <a href="./web/navercorp/index.html">
+                    <button>WEB</button>
+                  </a>
+                  <a href="https://github.com/hyj9069/hyj9069.github.io/tree/main/web/navercorp">
+                    <button>Git</button>
+                  </a>
                 </div>
               </li>
               <li class="item clone">
@@ -229,8 +257,12 @@
                   <p><em>기여도</em>퍼블리싱100%</p>
                 </div>
                 <div class="btn-wrap cursor-scale btn-hover">
-                  <button>WEB</button>
-                  <button>Git</button>
+                  <a href="./web/kjcareer/index.html">
+                    <button>WEB</button>
+                  </a>
+                  <a href="https://github.com/hyj9069/hyj9069.github.io/tree/main/web/kjcareer">
+                    <button>Git</button>
+                  </a>
                 </div>
               </li>
               <li class="item clone">
@@ -246,8 +278,12 @@
                   <p><em>기여도</em>퍼블리싱100%</p>
                 </div>
                 <div class="btn-wrap cursor-scale btn-hover">
-                  <button>WEB</button>
-                  <button>Git</button>
+                  <a href="./web/naver/index.html">
+                    <button>WEB</button>
+                  </a>
+                  <a href="#">
+                    <button>Git</button>
+                  </a>
                 </div>
               </li>
             </ul>

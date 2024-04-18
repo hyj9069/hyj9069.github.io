@@ -176,7 +176,38 @@ $(document).ready(function () {
           toggleClass: { targets: ".intro-sec", className: "active" },
         },
       });
-      //프로젝트 배경
+      const about = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".about",
+          start: "top center",
+          //부드럽게
+          ease: "linear",
+        },
+      });
+
+      about
+        .addLabel("label")
+        .to(
+          ".img_box",
+          {
+            // 다른 타겟을 선택하여 시간차로 효과를 주고 싶은 경우
+            className: "txt-motion", // 토글할 클래스 이름
+          },
+          "label"
+        ) // 시간 차를 주기 위해 - 값 사용
+        .to(
+          ".about .content-wrap .txt-slide",
+          {
+            // 다른 타겟을 선택하여 시간차로 효과를 주고 싶은 경우
+            className: "txt-motion", // 토글할 클래스 이름
+          },
+          "label"
+        ) // 시간 차를 주기 위해 - 값 사용
+        .to(".about .content-right .slide-wrap", {
+          // 다른 타겟을 선택하여 시간차로 효과를 주고 싶은 경우
+          className: "txt-motion", // 토글할 클래스 이름
+        });
+      //project 배경
       gsap.timeline({
         scrollTrigger: {
           trigger: ".projects .toy-content-wrap",
@@ -194,14 +225,13 @@ $(document).ready(function () {
         // scale: 0.8
       });
       ScrollTrigger.batch(projItems, {
-        start: "top 80%",
+        start: "top 60%",
         onEnter: (batch) => {
           batch.forEach((item, index) => {
             let item_tl = gsap.timeline();
             item_tl.to(item, 1, {
               opacity: 1,
               yPercent: 0,
-              // scale: 1,
               delay: index * 0.1,
               ease: "power2.out",
             });
@@ -229,7 +259,7 @@ $(document).ready(function () {
       const animateHide = (item) => {
         gsap.to(
           item,
-          { autoAlpha: 0, duration: 1, ease: "expo", y: 0 }
+          { autoAlpha: 0, duration: 0.8, ease: "expo", y: 0 }
           // overwrite:'auto'
         );
       };
@@ -237,7 +267,7 @@ $(document).ready(function () {
         // let delay = item.dataset.delay;
         gsap.to(
           item,
-          { autoAlpha: 1, duration: 1, ease: "expo", y: -200 }
+          { autoAlpha: 1, duration: 0.8, ease: "expo", y: -200 }
           // overwrite:'auto'
         );
       };
