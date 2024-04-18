@@ -4,6 +4,9 @@
 1. 계산기
 2. 전자시계
 3. 스톱워치
+4. TodoList
+5. OX Quiz
+6. 가위바위보게임
 
 ## Web Projects
 <br />
