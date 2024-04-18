@@ -726,10 +726,13 @@ section.projects.active {
 .graphic .swiper-btn {
   color: var(--point-color);
 }
-.swiper-button-prev {
+.graphic .swiper-btn::after {
+  font-size: 35px;
+}
+.swiper-button-prev.swiper-btn {
   left: 3%;
 }
-.swiper-button-next {
+.swiper-button-next.swiper-btn {
   right: 3%;
 }
 /* 팝업 */
