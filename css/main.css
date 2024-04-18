@@ -619,7 +619,7 @@ section.projects.active {
 }
 .projects .toy-content-wrap li .bg-box {
   position: absolute;
-  top: 35px;
+  top: 40px;
   left: 15px;
   width: 310px;
   height: 310px;
@@ -627,9 +627,11 @@ section.projects.active {
   border-radius: 30px;
 }
 .projects .toy-content-wrap .bg-box .txt {
+  display: flex;
+  align-items: baseline;
   position: absolute;
-  bottom: 9px;
-  left: 20px;
+  bottom: 16px;
+  left: 28px;
 }
 .projects .toy-content-wrap .txt strong {
   margin-right: 10px;

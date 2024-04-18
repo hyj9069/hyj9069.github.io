@@ -232,7 +232,7 @@ $(document).ready(function () {
             item_tl.to(item, 1, {
               opacity: 1,
               yPercent: 0,
-              delay: index * 0.1,
+              delay: index * 0.3,
               ease: "power2.out",
             });
           });
@@ -259,7 +259,7 @@ $(document).ready(function () {
       const animateHide = (item) => {
         gsap.to(
           item,
-          { autoAlpha: 0, duration: 0.8, ease: "expo", y: 0 }
+          { autoAlpha: 0, duration: 0.6, ease: "expo", y: 0 }
           // overwrite:'auto'
         );
       };
@@ -267,7 +267,7 @@ $(document).ready(function () {
         // let delay = item.dataset.delay;
         gsap.to(
           item,
-          { autoAlpha: 1, duration: 0.8, ease: "expo", y: -200 }
+          { autoAlpha: 1, duration: 0.6, ease: "expo", y: -200 }
           // overwrite:'auto'
         );
       };
