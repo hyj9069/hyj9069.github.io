@@ -701,17 +701,210 @@
                 </div>
               </div>
               <div class="ContentHeaderSubView">
-                <a href="#">전체언론사</a>
+                <a href="#" class="l_cont">분야별 뉴스</a>
+                <i> </i>
                 <div class="news">
-                  <a href="#">뉴시스</a>
+                  <a href="#">동아일보</a>
                   <div class="news_cont">
-                    <span>속보</span>
-                    <a href="#">지하철 1호선 의왕역서 인명사고...운행지연</a>
+                    <a href="#">의대 교수 25일부터 사직 처리...</a>
                   </div>
                 </div>
-                <a href="#">뉴스홈</a>
+                <a href="#" class="r_cont">뉴스홈</a>
               </div>
-              <div class="MediaView"></div>
+              <div class="MediaView">
+                <div class="media_left">
+                  <ul>
+                    <a href="#">
+                      <li>뉴스1</li>
+                    </a>
+                    <a href="#">
+                      <li>연합뉴스TV</li>
+                    </a>
+                    <a href="#">
+                      <li>SBS</li>
+                    </a>
+                    <a href="#">
+                      <li>MBN</li>
+                    </a>
+                    <a href="#">
+                      <li>한국경제TV</li>
+                    </a>
+                    <a href="#">
+                      <li>KBS</li>
+                    </a>
+                    <a href="#">
+                      <li>YTN</li>
+                    </a>
+                    <a href="#">
+                      <li>JTBC</li>
+                    </a>
+                    <a href="#">
+                      <li>TV조선</li>
+                    </a>
+                    <a href="#">
+                      <li>한국경제</li>
+                    </a>
+                    <a href="#">
+                      <li>서울경제</li>
+                    </a>
+                  </ul>
+                  <div class="sub">
+                    <span>구독중</span>
+                    <span class="num">48</span>
+                    <i></i>
+                  </div>
+                </div>
+                <div class="media_right">
+                  <div class="media_top">
+                    <a href="#" class="comp_logo"><img src="./img/logo_119_76_20221129173753.png" alt="데일리안" /></a>
+                    <span>04월 20일 00:20</span>
+                    <div class="media_edit">
+                      <span>
+                        <i></i>
+                        <span>주요뉴스</span>
+                      </span>
+                      <span>
+                        <i></i>
+                        <span>심층기획</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="center">
+                    <ul class="le_cont">
+                      <li>
+                        <a href="#"><img src="./img/media_center_1.jpg" alt="박수현, 여성 문제로 사직 명예훼손 혐의, 강용석 2심도 무죄…선거법만 벌금형" /></a>
+                        <a href="#"> "박수현, 여성 문제로 사직" 명예훼손 혐의, 강용석 2심도 무죄…선거법만 벌금형 </a>
+                      </li>
+                      <li>
+                        <a href="#"><img src="./img/media_center_2.jpg" alt="[속보] 日 대마도 인근 해역에서 규모 3.9 지진…부산·울산 등 지진 감지" /></a>
+                        <a href="#"> [속보] 日 대마도 인근 해역에서 규모 3.9 지진…부산·울산 등 지진 감지 </a>
+                      </li>
+                    </ul>
+                    <div class="ri_cont">
+                      <ul>
+                        <li><a href="#"> 남편 기다리다 북으로 피란... 전쟁이 갈라놓은 사랑의 최후 [윤태옥의 길 위에서 읽는 한국전쟁] </a></li>
+                        <li><a href="#"> 조국·이준석 한 목소리 "채상병 특검 거부권? 윤 대통령 탄핵 가늠자 될 것" </a></li>
+                        <li><a href="#"> "윤석열 잡아야죠" <뉴스타파> 기자 문자 공개한 검찰... 의도적 흘리기? </a></li>
+                        <li><a href="#"> 매순간 100m 달리기 수준의 노동, 이러다 큰일난다 </a></li>
+                      </ul>
+                      <p>언론사에서 직접 편집한 뉴스입니다.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <style>
+                .MediaView {
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                }
+                .MediaView .media_left {
+                  height: 180px;
+                  border: 1px solid #ebebeb;
+                  background: #fff;
+                  display: flex;
+                  flex-direction: column;
+                  border-radius: 4px;
+                }
+                .MediaView .media_left ul {
+                  display: flex;
+                  padding: 15px 30px 15px 15px;
+                  flex-direction: column;
+                  text-align: left;
+                  gap: 10px;
+                  overflow-y: scroll;
+                  height: 100%;
+                }
+                .MediaView .media_left ul li {
+                  font-size: 14px;
+                  font-weight: 600;
+                  line-height: 15px;
+                  display: inline-block;
+                  letter-spacing: -0.6px;
+                }
+                .MediaView .media_left ul li:hover {
+                  border-bottom: 1px solid #000;
+                }
+                .MediaView .media_left .sub {
+                  border-top: 1px solid #ebebeb;
+                  padding: 10px 15px;
+                  text-align: left;
+                  font-size: 14px;
+                }
+                .MediaView .media_left .sub .num {
+                  color: #3a67ea;
+                  font-weight: 600;
+                }
+                .MediaView .media_right .media_top {
+                  display: flex;
+                  align-items: center;
+                }
+                .MediaView .media_right .media_top .comp_logo {
+                  padding-right: 20px;
+                  position: relative;
+                }
+                .MediaView .media_right .media_top .comp_logo > img {
+                  height: 20px;
+                }
+                .MediaView .media_right .media_top .comp_logo::after {
+                  content: "";
+                  display: inline-block;
+                  width: 3px;
+                  height: 3px;
+                  background-color: #d3d5d7;
+                  background-color: var(--color_dot_divider);
+                  border-radius: 50%;
+                  vertical-align: top;
+                  position: absolute;
+                  right: 10px;
+                  top: 50%;
+                  transform: translateY(-50%);
+                }
+                .MediaView .media_right .media_top > span {
+                  font-size: 13px;
+                  color: #606060;
+                }
+                .MediaView .media_right .media_top .media_edit {
+                  display: flex;
+                  align-items: center;
+                  margin-left: auto;
+                  font-size: 13px;
+                }
+                .MediaView .media_right .media_top .media_edit > span {
+                  display: flex;
+                  align-items: center;
+                }
+                .MediaView .media_right .media_top .media_edit i {
+                  display: inline-block;
+                  width: 17px;
+                  height: 17px;
+                  border-radius: 50px;
+                  border: 1px solid #ebebeb;
+                  position: relative;
+                }
+                .MediaView .media_right .media_top .media_edit > span:nth-of-type(1) i {
+                  border: 1px solid #3a67ea;
+                  background-color: #3a67ea;
+                }
+                .MediaView .media_right .media_top .media_edit > span:nth-of-type(1) i::before {
+                  content: "";
+                  display: inline-block;
+                  width: 5px;
+                  height: 5px;
+                  background-color: #fff;
+                  border-radius: 50%;
+                  vertical-align: top;
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                }
+                .MediaView .media_right .media_top .media_edit span {
+                  line-height: 15px;
+                  margin-left: 5px;
+                }
+              </style>
               <div class="ContentPagingView"></div>
             </section>
 
@@ -764,16 +957,68 @@
                 transform: skewX(-15deg);
               }
               #main-newstand .ContentHeaderView ul li a {
-                font-size: 17px;
+                font-size: 16px;
                 font-weight: 600;
               }
-
               .ContentHeaderSubView {
                 display: flex;
                 align-items: center;
+                background: #f5f7f8;
+                padding: 15px 20px;
+                font-size: 14px;
+                margin-top: 20px;
+              }
+              .ContentHeaderSubView i {
+                background-image: url(https://pm.pstatic.net/resources/asset/sp_main.74b52318.png);
+                background-size: 444px 434px;
+                background-position: -123px -272px;
+                background-repeat: no-repeat;
+                width: 9px;
+                height: 6px;
+                display: inline-block;
+                vertical-align: top;
+              }
+              .ContentHeaderSubView .l_cont {
+                padding-right: 5px;
+                position: relative;
               }
               .ContentHeaderSubView .news {
                 display: flex;
+                position: relative;
+                padding-left: 20px;
+              }
+              .ContentHeaderSubView .news::before {
+                content: "";
+                display: block;
+                top: 50%;
+                left: 10px;
+                transform: translateY(-50%);
+                width: 1px;
+                height: 10px;
+                background: #ccc;
+                position: absolute;
+              }
+              .ContentHeaderSubView .news > a {
+                padding-right: 20px;
+                position: relative;
+              }
+              .ContentHeaderSubView .news > a::after {
+                content: "";
+                display: inline-block;
+                width: 3px;
+                height: 3px;
+                background-color: #d3d5d7;
+                background-color: var(--color_dot_divider);
+                border-radius: 50%;
+                vertical-align: top;
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+              }
+              .ContentHeaderSubView .r_cont {
+                margin-left: auto;
+                font-weight: 600;
               }
             </style>
             <section id="main-shopping"></section>
