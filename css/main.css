@@ -239,7 +239,7 @@ section.intro-sec {
   position: relative;
   background: var(--main-color);
   transition: background 0.5s;
-  padding: 210px 5% 0;
+  padding: 145px 5% 0;
   display: flex;
   flex-direction: column;
 }
@@ -249,7 +249,7 @@ section.intro-sec {
 .intro-sec .flow-txt {
   overflow: hidden;
   position: absolute;
-  top: 220px;
+  top: 186px;
   right: 0;
   left: 0;
   white-space: nowrap;
@@ -268,15 +268,6 @@ section.intro-sec {
     transform: translate3d(-100%, 0, 0);
   }
 }
-/* .intro-sec .wavetxt-wrap {
-  overflow: hidden;
-}
-.intro-sec .wavetxt-wrap.txt-motion .slide-up {
-  animation-name: slide-up;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
-} */
 .intro-sec strong {
   display: block;
   position: relative;
@@ -288,8 +279,9 @@ section.intro-sec {
 }
 .intro-sec .intro-txt {
   margin-top: 130px;
-  font-size: 1.9rem;
+  font-size: 1.5rem;
   color: #929292;
+  line-height: 2.5rem;
   text-align: center;
 }
 .intro-sec .scroll-down {
@@ -336,7 +328,6 @@ section.about {
 .about .content-left {
   margin-right: 100px;
   position: relative;
-  overflow: hidden;
 }
 .about .content-left::after {
   display: block;
@@ -391,14 +382,14 @@ section.about {
   transform: translateY(100%);
 }
 .about .content-right h3 {
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   font-size: 2rem;
   font-weight: 600;
   color: #f6cccc;
 }
 .about .content-right span,
 .about .content-right p {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: #000;
 }
 .about .content-right .license {
@@ -407,7 +398,7 @@ section.about {
 }
 .about .content-right .license span:first-of-type {
   display: inline-block;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 .about .content-right .education {
   display: flex;
@@ -421,7 +412,7 @@ section.about {
   margin-bottom: 20px;
 }
 .about .content-right .education p {
-  line-height: normal;
+  line-height: 2rem;
 }
 .about .content-right .skills {
   white-space: nowrap;
@@ -437,7 +428,6 @@ section.projects {
   height: auto;
   background-color: #fff;
   transition: background 0.5s;
-  height: 650vh;
 }
 section.projects.active {
   background-color: #2a392b;
@@ -494,6 +484,7 @@ section.projects.active {
 }
 .projects .web-proj .content-wrap li {
   position: static !important;
+  height: fit-content;
 }
 .projects .web-proj .content-wrap li > a {
   display: block;
@@ -516,7 +507,7 @@ section.projects.active {
   transform: scale(1.1);
 }
 .projects .web-proj .content-wrap li:nth-of-type(2) img {
-  object-position: top 0 right -50px;
+  object-position: top 0 right -35px;
 }
 .projects .web-proj .txt-wrap {
   padding: 20px 0;
@@ -586,7 +577,6 @@ section.projects.active {
   display: flex;
   gap: 130px;
   flex-direction: column;
-  padding: 300px 0;
   position: relative;
 }
 .projects .toy-content-wrap li {
@@ -1155,7 +1145,7 @@ section.contact {
 /* PC */
 @media screen and (min-width: 1280px) {
   .intro-sec .flow-txt span {
-    font-size: 16rem;
+    font-size: 17rem;
   }
   .intro-sec strong {
     font-size: 16rem;
@@ -1256,9 +1246,24 @@ section.contact {
     font-size: 7rem;
   }
   /* intro-sec */
+  section.intro-sec {
+    padding-top: 153px;
+  }
   .intro-sec .flow-txt span,
   .intro-sec strong {
     font-size: 13rem;
+  }
+  .intro-sec .intro-txt {
+    font-size: 1.5rem;
+  }
+  .intro-sec .scroll-down {
+    bottom: 1rem;
+  }
+  .intro-sec .scroll-down span {
+    font-size: 1.5rem;
+  }
+  .intro-sec .scroll-down .material-symbols-outlined {
+    font-size: 3rem;
   }
   /* about */
   .about .content-left {
@@ -1270,6 +1275,13 @@ section.contact {
   }
   .about .content-right {
     margin-left: 100px;
+    gap: 25px;
+  }
+  .about .content-right h3 {
+    margin-bottom: 25px;
+  }
+  .about .content-right .license span:first-of-type {
+    margin-bottom: 15px;
   }
   /* project */
   .projects .web-proj h3 {
@@ -1336,9 +1348,6 @@ section.contact {
   section.graphic {
     justify-content: center;
     flex-direction: column;
-  }
-  .graphic .swiper {
-    width: 70%;
   }
   .graphic .gr-content-left {
     position: static;
@@ -1433,18 +1442,22 @@ section.contact {
   .projects .toy-content-wrap li:nth-child(even) {
     right: 20%;
   }
+  .projects .toy-content-wrap a img {
+    width: 250px;
+    height: 250px;
+  }
   .projects .toy-content-wrap li .bg-box {
     top: 35px;
-    width: 310px;
-    height: 310px;
+    width: 260px;
+    height: 260px;
   }
   .projects .toy-content-wrap .txt strong {
-    font-size: 1.4rem;
-  }
-  .projects .toy-content-wrap .txt span {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
   /* graphic */
+  .graphic .swiper {
+    width: 70%;
+  }
   section.graphic {
     gap: 40px;
     justify-content: center;
@@ -1474,6 +1487,9 @@ section.contact {
 /* mob */
 @media screen and (max-width: 768px) {
   /* common */
+  section {
+    min-height: 650px;
+  }
   section.about,
   section.projects,
   section.graphic,
@@ -1526,10 +1542,10 @@ section.contact {
     font-size: 80px;
   }
   .intro-main .title span:nth-of-type(1) {
-    top: 0;
+    top: -33%;
   }
   .intro-main .title span:nth-of-type(3) {
-    bottom: 0;
+    bottom: -33%;
   }
   .intro-main .orbit-content {
     width: 450px;
@@ -1540,24 +1556,37 @@ section.contact {
   }
   /* intro-sec */
   section.intro-sec {
-    padding-top: 200px;
+    padding-top: 146px;
   }
   .intro-sec .slide-box {
     top: 180px;
   }
-  .intro-sec .slide-box span,
+  .intro-sec .flow-txt {
+    top: 190px;
+  }
+  .intro-sec .flow-txt span {
+    font-size: 9rem;
+  }
   .intro-sec strong {
-    font-size: 7rem;
+    font-size: 8rem;
+  }
+  .intro-sec .split .line {
+    display: flex !important;
+    flex-direction: column;
+  }
+  .intro-sec .split .word:last-child {
+    margin-top: -30px;
   }
   .intro-sec .intro-txt {
-    margin-top: 120px;
-    font-size: 1.5rem;
+    margin-top: 100px;
+    font-size: 1.3rem;
+    line-height: 2rem;
   }
   .intro-sec .scroll-down {
-    bottom: 25px;
+    bottom: 15px;
   }
   .intro-sec .scroll-down span {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   .intro-sec .scroll-down .material-symbols-outlined {
     font-size: 3rem;
@@ -1565,7 +1594,7 @@ section.contact {
   /* about */
   .about .content-wrap {
     flex-direction: column;
-    margin-top: 77px;
+    margin-top: 58px;
   }
   .about .content-left {
     display: flex;
@@ -1589,17 +1618,21 @@ section.contact {
   .about .content-right {
     margin-top: 20px;
     margin-left: 0;
+    gap: 0;
+  }
+  .about .content-right .content {
+    padding: 15px 0 0;
+  }
+  .about .content-right .content:not(:first-child) {
+    margin-top: 0;
+    border-top: 1px solid #d9d9d9;
   }
   .about .content-right h3 {
     margin-bottom: 15px;
     font-size: 1.7rem;
   }
-  .about .content-right .content {
-    padding: 15px 0;
-  }
-  .about .content-right .content:not(:first-child) {
-    margin-top: 0;
-    border-top: 1px solid #d9d9d9;
+  .about .content-right .license span:first-of-type {
+    margin-bottom: 10px;
   }
   .about .content-right span,
   .about .content-right p {
@@ -1607,6 +1640,9 @@ section.contact {
   }
   .about .content-right .education > div:not(:last-child) {
     margin-bottom: 10px;
+  }
+  .about .content-right .skills img {
+    height: 25px;
   }
   /* projects */
   section.projects {
@@ -1631,10 +1667,8 @@ section.contact {
     font-size: 1.1rem;
   }
   .projects .web-proj .content-wrap {
-    display: grid;
-    justify-content: space-between;
     margin-top: 20px;
-    /* li 3개씩 보이게 */
+    /* li 1s개씩 보이게 */
     grid-template-columns: repeat(1, 1fr);
   }
   .projects .web-proj .txt-wrap h4 {
@@ -1663,23 +1697,26 @@ section.contact {
     right: 10%;
   }
   .projects .toy-content-wrap li .bg-box {
-    top: 35px;
+    top: 30px;
     width: 210px;
     height: 210px;
   }
   .projects .toy-content-wrap .bg-box .txt {
     display: flex;
     flex-direction: column;
-    bottom: 8px;
+    bottom: 6px;
+    gap: 1px;
   }
   .projects .toy-content-wrap .txt strong {
-    font-size: 1.4rem;
-  }
-  .projects .toy-content-wrap .txt span {
     font-size: 1.2rem;
   }
+  .projects .toy-content-wrap .txt span {
+    font-size: 1.1rem;
+  }
   /* graphic */
-
+  .graphic .swiper {
+    width: 50%;
+  }
   .pop-up button {
     right: 5%;
     top: 20%;
@@ -1776,6 +1813,10 @@ section.contact {
   }
 }
 @media screen and (max-width: 600px) {
+  /* graphic */
+  .graphic .swiper {
+    width: 70%;
+  }
   /* contact */
   .contact .content-box .l_cont {
     height: 7rem;

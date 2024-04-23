@@ -218,26 +218,28 @@ $(document).ready(function () {
       });
       /////web-proj items////
       const projItems = gsap.utils.toArray(".web-proj .content-wrap .item");
+
+      function animateItems() {
+        projItems.forEach((item, index) => {
+          let item_tl = gsap.timeline();
+          item_tl.to(item, 1, {
+            opacity: 1,
+            yPercent: 0,
+            delay: index * 0.3,
+            ease: "power2.out",
+          });
+        });
+      }
+
       gsap.set(projItems, {
         opacity: 0,
         yPercent: 30,
         delay: 1,
-        // scale: 0.8
       });
+
       ScrollTrigger.batch(projItems, {
         start: "top 60%",
-        onEnter: (batch) => {
-          batch.forEach((item, index) => {
-            let item_tl = gsap.timeline();
-            item_tl.to(item, 1, {
-              opacity: 1,
-              yPercent: 0,
-              delay: index * 0.3,
-              ease: "power2.out",
-            });
-          });
-        },
-        once: true,
+        onEnter: animateItems,
       });
 
       // toy-text
@@ -281,8 +283,9 @@ $(document).ready(function () {
               animateHide(item);
             },
             trigger: item,
-            start: "top bottom",
-            end: "top bottom",
+            start: "top 80%",
+            end: "end bottom",
+            toggleActions: "play none none reverse",
           });
       });
       // toy-item iframe pop-up
