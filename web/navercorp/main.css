@@ -106,7 +106,7 @@ header #gnb > li:last-child > a::before {
   position: absolute;
   top: 31px;
   right: 0;
-  width: 18px;
+  width: 18px !important;
   height: 18px;
   background: url(./img/common/sprite.png) no-repeat -59px 0;
   background-size: 474px 1600px;

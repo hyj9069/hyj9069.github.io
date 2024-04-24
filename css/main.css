@@ -387,6 +387,9 @@ section.about {
   font-weight: 600;
   color: #f6cccc;
 }
+.about .content-right span {
+  line-height: normal;
+}
 .about .content-right span,
 .about .content-right p {
   font-size: 1.4rem;
@@ -528,13 +531,17 @@ section.projects.active {
 }
 .projects .web-proj .txt-wrap p {
   font-size: 1.4rem;
+  margin-bottom: 15px;
 }
-.projects .web-proj .txt-wrap p:nth-of-type(1) {
-  margin-bottom: 10px;
+.projects .web-proj .txt-wrap p:last-of-type {
+  margin-bottom: 0;
 }
 .projects .web-proj .txt-wrap p > em {
   margin-right: 10px;
   font-weight: 600;
+  display: block;
+  margin-bottom: 10px;
+  color: #2a392b;
 }
 .projects .web-proj .btn-wrap {
   display: flex;
@@ -585,7 +592,8 @@ section.projects.active {
   width: fit-content;
   height: auto;
 }
-
+.projects .toy-content-wrap li:hover {
+}
 .projects .toy-content-wrap li:nth-child(odd) {
   left: 25%;
 }
