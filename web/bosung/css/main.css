@@ -16,10 +16,8 @@ html.open_menu {
 }
 body {
   position: relative;
-  font-family: "Pretendard Variable", Pretendard, -apple-system,
-    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
-    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic",
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-size: 16px;
   line-height: 1.6;
   letter-spacing: -0.04rem;
@@ -435,7 +433,7 @@ body {
 }
 /* common */
 section {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   min-height: 720px;
 }
@@ -552,9 +550,7 @@ section {
   top: 0;
   width: auto;
 }
-.sec1
-  .swiper-pagination-horizontal.swiper-pagination-bullets
-  .swiper-pagination-bullet {
+.sec1 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0;
   border: 1px solid rgba(255, 255, 255, 0.7);
   width: 10px;
@@ -562,9 +558,7 @@ section {
   background: transparent;
   opacity: 1;
 }
-.sec1
-  .swiper-pagination-horizontal.swiper-pagination-bullets
-  .swiper-pagination-bullet-active {
+.sec1 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet-active {
   background: #fff;
 }
 [class*="swiper-button"] {
@@ -586,11 +580,19 @@ section {
   position: relative;
   right: 0;
 }
-.sec1 .swiper-btns .swiper-button-prev::after,
-.sec1 .swiper-btns .swiper-button-next::after {
-  font-size: 25px;
+.sec1 .swiper-button-prev.l,
+.sec1 .swiper-button-next.l {
+  width: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
-
+.sec1 .swiper-button-prev.l {
+  left: 3%;
+}
+.sec1 .swiper-button-next.l {
+  right: 3%;
+}
 .sec1 .swiper-btns .swiper-button-wr::after {
   display: block;
   position: absolute;
@@ -625,17 +627,19 @@ section {
 }
 /* sec1-end */
 .sec2 {
-  padding: 150px 0;
   overflow: hidden;
   position: relative;
   height: 100vh;
   background-color: #fff;
+  display: flex;
+  align-items: center;
 }
 .sec2 .sec2_inner {
-  padding-top: 30%;
   overflow: hidden;
-  position: relative;
+  position: absolute;
   width: 100%;
+  top: 0;
+  padding-top: 150px;
 }
 .sec2 .h2_txt {
   position: absolute;
@@ -673,18 +677,33 @@ section {
 .sec2 .cover.right {
   right: 0;
 }
-
-.sec2 .sec2_inner video {
-  position: absolute;
+.sec2 .sec2_inner .video_wrap {
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 0;
+  /* position: absolute;
   top: 50%;
   transform: translateY(-50%);
   filter: brightness(0.9);
+  width: 100%;
+  height: 100%; */
 }
-.sec2 .sec2_inner img {
+.sec2 .sec2_inner iframe {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: -31%;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
 }
+/* .sec2 .sec2_inner iframe video {
+  width: 100%;
+  height: 100%;
+} */
 .sec2 .sec2_inner p {
   position: absolute;
   bottom: 50%;
@@ -1270,8 +1289,10 @@ section {
 }
 /* 노트북 pc */
 @media screen and (min-width: 1280px) {
-  /* sec3 */
-
+  /* sec2 */
+  .sec3 .inner {
+    padding-top: 50px;
+  }
   /* sec6 */
   .sec6 .content {
     align-items: center;
@@ -1330,6 +1351,18 @@ section {
   .inner,
   .sec5 .inner {
     padding: 0 6%;
+  }
+  /* sec2 */
+  .sec2 .sec2_inner {
+    padding-top: 0;
+    height: 100%;
+  }
+  .sec2 .sec2_inner .video_wrap {
+    padding-bottom: 0;
+    height: 100%;
+  }
+  .sec2 .sec2_inner iframe {
+    top: 0;
   }
   /* sec6 */
   .sec6 {
@@ -1467,7 +1500,7 @@ section {
   }
   /* common */
   section {
-    min-height: auto;
+    min-height: 680px;
   }
   .inner h2,
   .sec3 h2 {
@@ -1497,10 +1530,17 @@ section {
     font-size: 15px;
     line-height: 1.3rem;
   }
-  .sec2 .sec2_inner video {
+  .sec2 .sec2_inner .video_wrap {
+    padding-bottom: 0;
+    height: 100%;
+  }
+  .sec2 .sec2_inner iframe {
+    top: 0;
+  }
+  /* .sec2 .sec2_inner video {
     top: 0;
     transform: translate(0);
-  }
+  } */
   /* sec3 */
   .sec3::before {
     bottom: 60px;
@@ -1672,11 +1712,16 @@ section {
     margin-top: 20px;
     font-size: 13px;
   }
-  #footer .content_left .address {
+  #footer .content_left p {
     line-height: normal;
+    font-size: 13px;
+    letter-spacing: normal;
+  }
+  #footer .content_left .customer {
+    font-size: 14px;
   }
   #footer .content_left .copyright {
-    font-size: 12px;
+    font-size: 11px;
   }
   #footer .content_right {
     display: flex;

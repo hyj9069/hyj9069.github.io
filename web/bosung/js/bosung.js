@@ -105,9 +105,9 @@ $(document).ready(function () {
 const mySwiper = new Swiper(".swiper.main", {
   direction: "horizontal",
   loop: true,
-  autoplay: {
-    delay: 2500,
-  },
+  // autoplay: {
+  //   delay: 2500,
+  // },
   effect: "fade",
   speed: 2000,
   pagination: {
@@ -164,9 +164,9 @@ const sec4Swiper = new Swiper(".newsSwiper", {
 const sec5Swiper = new Swiper(".mediaSwiper", {
   direction: "horizontal",
   loop: true,
-  // autoplay : {
-  //   delay : 2000
-  // },
+  autoplay: {
+    delay: 2000,
+  },
   speed: 1000,
   slidesPerView: 2,
   spaceBetween: 20,
