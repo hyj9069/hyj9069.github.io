@@ -51,7 +51,7 @@ $(document).ready(function () {
   let preScrollTop = 0;
   $(window).scroll(function () {
     let nowScrollTop = $(window).scrollTop();
-    console.log("now : ", nowScrollTop);
+    // console.log("now : ", nowScrollTop);
     if (nowScrollTop > preScrollTop && !header.hasClass("active")) {
       header.addClass("up");
     } else if (nowScrollTop == 0) {
@@ -105,9 +105,9 @@ $(document).ready(function () {
 const mySwiper = new Swiper(".swiper.main", {
   direction: "horizontal",
   loop: true,
-  // autoplay: {
-  //   delay: 2500,
-  // },
+  autoplay: {
+    delay: 2500,
+  },
   effect: "fade",
   speed: 2000,
   pagination: {
@@ -131,7 +131,7 @@ const busi_right = new Swiper(".business_right", {
 });
 leLi.each(function (index, item) {
   $(item).click(function () {
-    console.log(index);
+    // console.log(index);
     busi_right.slideTo(index);
     $(this).addClass("active").siblings().removeClass("active");
   });
@@ -228,7 +228,7 @@ totalMenu.click(function () {
 
 function allMenu() {
   let windowWid = $(window).width();
-  console.log("windowwid : ", windowWid);
+  // console.log("windowwid : ", windowWid);
 
   if (windowWid > 1280 && totalMenu.hasClass("close")) {
     $(".side_nav").css({ top: "0", display: "flex" }), $(".m_side_nav").css({ display: "none" }), $("body").css({ overflow: "hidden" });
@@ -247,15 +247,15 @@ let msideILength = $(".side_dep_wrap i").length;
 let clicked = true;
 let rotated = false;
 for (let i = 0; i < msideILength; i++) {
-  $(".side_dep_wrap i")
+  $(".side_dep_wrap")
     .eq(i)
     .click(function () {
       $(".m_side_nav .side_dep2").eq(i).toggle("show");
       if (!rotated) {
-        $(this).css({ transform: "rotate(180deg)" });
+        $(this).find("i").css({ transform: "rotate(180deg)" });
         rotated = true;
       } else {
-        $(this).css({ transform: "rotate(0deg)" });
+        $(this).find("i").css({ transform: "rotate(0deg)" });
         rotated = false;
       }
     });
