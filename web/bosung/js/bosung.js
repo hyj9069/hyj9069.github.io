@@ -218,7 +218,7 @@ $(".m_side_nav").hide();
 const totalMenu = $(".total_menu");
 totalMenu.click(function () {
   $(this).toggleClass("close");
-  $("html").toggleClass("open_menu");
+  $("body").toggleClass("open_menu");
 
   allMenu();
   $(window).on("resize", function () {
@@ -231,12 +231,11 @@ function allMenu() {
   // console.log("windowwid : ", windowWid);
 
   if (windowWid > 1280 && totalMenu.hasClass("close")) {
-    $(".side_nav").css({ top: "0", display: "flex" }), $(".m_side_nav").css({ display: "none" }), $("body").css({ overflow: "hidden" });
+    $(".side_nav").css({ top: "0", display: "flex" }), $(".m_side_nav").css({ display: "none" });
   } else if (windowWid <= 1280 && totalMenu.hasClass("close")) {
-    $(".side_nav").css({ display: "none" }), $(".m_side_nav").css({ top: "0", display: "block" }), $("body").css({ overflow: "hidden" });
+    $(".side_nav").css({ display: "none" }), $(".m_side_nav").css({ top: "0", display: "block" });
   } else {
     $(".side_nav").css({ top: -v, display: "none" }), $(".m_side_nav").css({ top: -v, display: "none" });
-    $("body").css({ overflow: "visible" });
   }
 }
 //전체메뉴 모바일
