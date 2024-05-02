@@ -347,9 +347,9 @@ $(document).ready(function () {
     popImg.css("display", "none");
     $("html").removeClass("scroll-none");
   });
-});
 
-// 그래픽 슬라이드
+  // 그래픽 슬라이드
+});
 const swiper = new Swiper(".swiper", {
   direction: "horizontal",
   slidesPerView: 1,
