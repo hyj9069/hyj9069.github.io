@@ -629,14 +629,15 @@ section {
   align-items: center;
 }
 .sec2 .sec2_inner {
+  padding-top: 30%;
   overflow: hidden;
-  position: absolute;
+  position: relative;
   width: 100%;
-  top: 0;
-  padding-top: 150px;
 }
 .sec2 .h2_txt {
   position: absolute;
+  /* top: 10%; */
+  /* left: 50%; */
   bottom: 5%;
   z-index: 4;
   font-size: 6rem;
@@ -646,6 +647,8 @@ section {
   white-space: nowrap;
   animation: scroll-animation 80s linear infinite;
   transition: all 0.8s;
+  /* transform: translateX(-50%); */
+  /* opacity: 0.3; */
   opacity: 0;
   will-change: transform;
 }
@@ -671,33 +674,18 @@ section {
 .sec2 .cover.right {
   right: 0;
 }
-.sec2 .sec2_inner .video_wrap {
-  padding-bottom: 56.25%;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  height: 0;
-  /* position: absolute;
+
+.sec2 .sec2_inner video {
+  position: absolute;
   top: 50%;
   transform: translateY(-50%);
   filter: brightness(0.9);
-  width: 100%;
-  height: 100%; */
 }
-.sec2 .sec2_inner iframe {
+.sec2 .sec2_inner img {
   position: absolute;
-  top: -31%;
-  right: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  pointer-events: none;
+  top: 50%;
+  transform: translateY(-50%);
 }
-/* .sec2 .sec2_inner iframe video {
-  width: 100%;
-  height: 100%;
-} */
 .sec2 .sec2_inner p {
   position: absolute;
   bottom: 50%;
