@@ -380,7 +380,7 @@ section.about {
 .about .content-right .slide-wrap .content {
   transform: translateY(100%);
 }
-.about .content-right h3 {
+.about .content-right h4 {
   margin-bottom: 30px;
   font-size: 2rem;
   font-weight: 600;
@@ -1280,7 +1280,7 @@ section.contact {
     gap: 25px;
     margin-left: 100px;
   }
-  .about .content-right h3 {
+  .about .content-right h4 {
     margin-bottom: 25px;
   }
   .about .content-right .license span:first-of-type {
@@ -1402,7 +1402,7 @@ section.contact {
   .about .content-right {
     margin-left: 50px;
   }
-  .about .content-right h3 {
+  .about .content-right h4 {
     font-size: 1.7rem;
   }
   .about .content-right span,
@@ -1630,7 +1630,7 @@ section.contact {
     margin-top: 0;
     border-top: 1px solid #d9d9d9;
   }
-  .about .content-right h3 {
+  .about .content-right h4 {
     margin-bottom: 15px;
     font-size: 1.7rem;
   }
