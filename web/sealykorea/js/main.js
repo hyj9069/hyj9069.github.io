@@ -1,9 +1,14 @@
 $(function () {
   let header = $("#header");
   let nav = $("nav");
+  let preScrollTop = $(window).scrollTop();
+  let aboutSwiper;
+  let collecSwiper;
+
   nav.hover(function () {
     header.toggleClass("active");
   });
+
   $(".aside_wrap").hide();
   $(".btn_allmenu_open").click(() => {
     $(".aside_wrap").show();
@@ -18,10 +23,8 @@ $(function () {
     $(this).toggleClass("active");
   });
 
-  let preScrollTop = 0;
   $(window).scroll(function () {
     let nowScrollTop = $(window).scrollTop();
-    console.log("now : ", nowScrollTop);
     if (nowScrollTop > preScrollTop && !header.hasClass("active")) {
       header.addClass("up");
     } else if (nowScrollTop == 0) {
@@ -32,6 +35,7 @@ $(function () {
     }
     preScrollTop = nowScrollTop;
   });
+
   new Swiper(".main_visual", {
     navigation: {
       nextEl: ".swiper-button-next",
@@ -45,91 +49,70 @@ $(function () {
       type: "fraction",
     },
   });
-  let aboutList = new Swiper(".about_list", {
-    // freeMode: true,
-    // watchSlidesProgress: true,
-  });
-
-  let ww = $(window).width();
-  let aboutSwiper;
-  let collecSwiper;
 
   responsiveSwiper();
-  initSwiperShop(".shop");
+  initSwiperShop(".swiper.shop");
 
   $(window).on("resize", function () {
-    ww = $(window).width();
     responsiveSwiper();
-    initSwiperShop(".shop");
+    initSwiperShop(".swiper.shop");
   });
 
-  let listOn = $(".about_list ul li.on");
-
-  $(".about_list li").each((index, item) => {
-    $(item).mouseover(function () {
-      listOn.removeClass("on");
-      // aboutSwiper의 해당 인덱스로 슬라이드 이동
-      aboutSwiper.slideTo(index);
-      $(item).addClass("on").siblings().removeClass("on");
-      //js 버전
-      // $('.about_list li').forEach((item2, index2) => {
-      //   if (index2!== index) {
-      //     item2.classList.remove('on');
-      //   }
-      // });
-    });
+  $(".about_list ul li").mouseover(function () {
+    let index = $(this).index();
+    $(this).addClass("on").siblings().removeClass("on");
+    aboutSwiper.slideTo(index);
   });
 
   function responsiveSwiper() {
+    let ww = $(window).width();
     if (ww <= 1279) {
-      // 페이드 효과
       initSwiper("slide");
-      if (typeof collecSwiper !== "undefined") {
+      $(".collection_list").addClass("swiper-wrapper");
+      $(".collection_list>li").addClass("swiper-slide");
+      if (collecSwiper) {
         collecSwiper.destroy();
+        collecSwiper = undefined;
       }
-      // collecSwiper = undefined;
-      $(".swiper.collection ul").addClass("swiper-wrapper");
-      $(".swiper.collection ul li").addClass("swiper-slide");
-      collecSwiper = new Swiper(".swiper.collection", {
-        //스크롤바
+      collecSwiper = new Swiper(".collection_wrap", {
+        slidesPerView: 1,
         scrollbar: {
           el: ".swiper-scrollbar",
         },
       });
-    } else if (ww > 1279) {
-      // 슬라이드 효과
+    } else {
       initSwiper("fade");
-      if (typeof collecSwiper !== "undefined") {
+      if (collecSwiper) {
         collecSwiper.destroy();
+        collecSwiper = undefined;
       }
-      $(".swiper.collection ul").removeClass("swiper-wrapper");
-      $(".swiper.collection ul li").removeClass("swiper-slide");
+      $(".collection_list").removeClass("swiper-wrapper");
+      $(".collection_list>li").removeClass("swiper-slide");
     }
   }
-  // .about swiper
+
   function initSwiper(effect) {
-    let scrollbarValue = ww > 768 ? undefined : { el: ".swiper-scrollbar" };
-    if (typeof aboutSwiper == "object") aboutSwiper.destroy();
+    if (aboutSwiper) {
+      aboutSwiper.destroy();
+      aboutSwiper = undefined;
+    }
     aboutSwiper = new Swiper(".about", {
       fadeEffect: { crossFade: true }, //겹침현상 해결
       speed: 1200,
+      // html swiper 부분에 thumbsSlider="" 추가
       // thumbs: { 연결 시 클릭했을 때 슬라이드 적용
-      //   swiper: aboutList,
+      // swiper: aboutList,
       // },
-      // direction: 'horizontal',
       effect: effect,
-      scrollbar: { scrollbarValue },
     });
   }
 
   function initSwiperShop(selector) {
+    let ww = $(window).width(); // responsiveSwiper 함수 내에서 정의된 변수를 여기서 사용
     let slidesPerViewValue = ww > 1279 ? 4 : 1.2;
-
     new Swiper(selector, {
       loop: true,
-      // autoplay: {
-      //     delay: 2000,
-      // },
+      autoplay: true,
       centeredSlides: true,
       grabCursor: true,
       slidesPerView: slidesPerViewValue,
