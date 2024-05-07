@@ -221,7 +221,6 @@ const hide_txt = $(".total_menu .hide_txt");
 totalMenu.click(function () {
   $(this).toggleClass("close");
   $("body").toggleClass("open_menu");
-
   allMenu();
   $(window).on("resize", function () {
     allMenu();
