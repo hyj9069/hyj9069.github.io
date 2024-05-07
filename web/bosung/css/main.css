@@ -96,8 +96,8 @@ body.open_menu {
 #header h1 {
   position: absolute;
   left: 7%;
-  width: 156px;
   z-index: 999;
+  width: 156px;
 }
 #header h1 > a {
   display: block;
@@ -260,8 +260,8 @@ body.open_menu {
 #header.active .util .lan_wrap.down,
 #header.on .util .lan_wrap.down,
 #header[data-bg="white"] .util .lan_wrap.down {
-  background: rgba(255, 255, 255, 0.5);
   border: 0;
+  background: rgba(255, 255, 255, 0.5);
 }
 #header .util .lan_wrap.down {
   height: 70px;
@@ -377,9 +377,9 @@ body.open_menu {
   right: 0;
   bottom: 0;
   left: 0;
+  z-index: 99;
   background: var(--color-main--);
   color: #fff;
-  z-index: 99;
 }
 #header .side_nav::-webkit-scrollbar,
 #header .m_side_nav::-webkit-scrollbar {
@@ -590,9 +590,9 @@ section {
 }
 .sec1 .swiper-button-prev.l,
 .sec1 .swiper-button-next.l {
-  width: 20px;
   position: absolute;
   top: 50%;
+  width: 20px;
   transform: translateY(-50%);
 }
 .sec1 .swiper-button-prev.l {
@@ -635,12 +635,12 @@ section {
 }
 /* sec1-end */
 .sec2 {
+  display: flex;
+  align-items: center;
   overflow: hidden;
   position: relative;
   height: 100vh;
   background-color: #fff;
-  display: flex;
-  align-items: center;
 }
 .sec2 .sec2_inner {
   padding-top: 30%;
@@ -1095,8 +1095,8 @@ section {
 .sec5 .inner .swiper.mediaSwiper .slide_txt {
   padding: 20px 20px 15px;
   height: 100%;
-  background: #fff;
   height: 100%;
+  background: #fff;
 }
 .sec5 .inner .swiper.mediaSwiper .slide_txt p {
   display: -webkit-box;
@@ -1422,10 +1422,10 @@ section {
 }
 @media screen and (min-width: 1025px) {
   #footer .content_left {
-    font-size: 15px;
-    color: #666;
     position: absolute;
     left: 50%;
+    font-size: 15px;
+    color: #666;
     transform: translateX(-50%);
   }
 }
@@ -1447,22 +1447,22 @@ section {
     position: relative;
   }
   #footer .inner .in_wr {
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
   }
   #footer .logo {
     width: 120px;
   }
   #footer .content_left {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     margin-top: 20px;
     font-size: 13px;
   }
   #footer .content_left p {
-    line-height: normal;
     font-size: 13px;
+    line-height: normal;
     letter-spacing: normal;
   }
   #footer .content_left .address {

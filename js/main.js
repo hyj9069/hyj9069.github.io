@@ -328,9 +328,9 @@ $(document).ready(function () {
     loop: true,
   });
   // 그래픽
-  let imgLength = $(".swiper-wrapper #frame").length;
+  let imgLength = $(".graphic .img-content").length;
   console.log(imgLength);
-  let graphicImg = $(".swiper-wrapper #frame");
+  let graphicImg = $(".graphic .img-content");
   let popUp = $(".pop-up");
   let popImg = $(".pop-up .pop-img");
   let cloBtn = $(".pop-up .close-pop");
@@ -350,7 +350,7 @@ $(document).ready(function () {
 
   // 그래픽 슬라이드
 });
-const swiper = new Swiper(".swiper", {
+const swiper = new Swiper(".graphic .swiper", {
   direction: "horizontal",
   slidesPerView: 1,
   spaceBetween: 30,
