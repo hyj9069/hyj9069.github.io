@@ -112,7 +112,6 @@ $(function () {
     let slidesPerViewValue = ww > 1279 ? 4 : 1.2;
     new Swiper(selector, {
       loop: true,
-      autoplay: true,
       centeredSlides: true,
       grabCursor: true,
       slidesPerView: slidesPerViewValue,
