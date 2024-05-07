@@ -216,6 +216,8 @@ $(".m_side_nav").hide();
 
 //전체 메뉴
 const totalMenu = $(".total_menu");
+const hide_txt = $(".total_menu .hide_txt");
+
 totalMenu.click(function () {
   $(this).toggleClass("close");
   $("body").toggleClass("open_menu");
@@ -224,6 +226,12 @@ totalMenu.click(function () {
   $(window).on("resize", function () {
     allMenu();
   });
+
+  if (totalMenu.hasClass("close")) {
+    hide_txt.text("전체메뉴닫기");
+  } else {
+    hide_txt.text("전체메뉴보기");
+  }
 });
 
 function allMenu() {
