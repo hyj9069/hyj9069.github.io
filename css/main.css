@@ -614,7 +614,7 @@ section.projects.active {
 }
 .projects .toy-content-wrap li .bg-box {
   position: absolute;
-  top: 40px;
+  top: 60px;
   left: 15px;
   width: 310px;
   height: 310px;
@@ -623,9 +623,10 @@ section.projects.active {
 }
 .projects .toy-content-wrap .bg-box .txt {
   display: flex;
+  flex-direction: column;
   align-items: baseline;
   position: absolute;
-  bottom: 16px;
+  bottom: 15px;
   left: 28px;
 }
 .projects .toy-content-wrap .txt strong {
@@ -633,9 +634,14 @@ section.projects.active {
   font-size: 1.4rem;
   font-weight: 600;
 }
-.projects .toy-content-wrap .txt span {
+.projects .toy-content-wrap .txt .span {
+  display: inline-block;
   font-size: 1.2rem;
   color: #929292;
+}
+.projects .toy-content-wrap .txt .contribute {
+  display: block;
+  margin-top: 5px;
 }
 .toy-pop .iframe-wrap {
   display: none;
