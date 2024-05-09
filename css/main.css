@@ -1080,6 +1080,9 @@ section.goal {
   margin-right: 70px;
   opacity: 1;
 }
+.goal .wrap-txt:nth-of-type(18) .word {
+  opacity: 1;
+}
 /* contact */
 section.contact {
   overflow: hidden;
@@ -1436,7 +1439,7 @@ section.contact {
     font-size: 1.2rem;
   }
   /* toy */
-  .projects .toy-proj h3 {
+  .projects .toy-proj h4 {
     font-size: 15rem;
   }
   .projects .toy-content-wrap li:nth-child(odd) {
@@ -1686,7 +1689,7 @@ section.contact {
   .projects .web-proj .btn-wrap button {
     margin-right: 3px;
   }
-  .projects .toy-proj h3 {
+  .projects .toy-proj h4 {
     font-size: 8rem;
   }
   .projects .toy-content-wrap a img {
@@ -1766,7 +1769,8 @@ section.contact {
   .goal .wrap-txt:nth-of-type(7) .word,
   .goal .wrap-txt:nth-of-type(9) .word,
   .goal .wrap-txt:nth-of-type(11) .word,
-  .goal .wrap-txt:nth-of-type(14) .word {
+  .goal .wrap-txt:nth-of-type(14) .word,
+  .goal .wrap-txt:nth-of-type(18) .word {
     margin-right: 30px;
   }
   .goal .wrap-txt:nth-of-type(2) .word {
@@ -1792,9 +1796,7 @@ section.contact {
   .goal .wrap-txt:nth-of-type(10) .word {
     margin-right: 30px;
   }
-  .goal .wrap-txt:nth-of-type(15) .word {
-    margin-right: 30px;
-  }
+
   .goal .txt-wrap .s-l {
     font-size: 2.5rem;
   }
@@ -1826,5 +1828,15 @@ section.contact {
   }
   .contact .content-box .l_cont strong span {
     font-size: 10rem;
+  }
+  /* goal */
+  .goal .wrap-txt:nth-of-type(15) .word {
+    margin-right: 0;
+  }
+  .goal .wrap-txt:nth-of-type(16) .word {
+    margin-right: 0;
+  }
+  .goal .wrap-txt:nth-of-type(17) .word {
+    margin-right: 0;
   }
 }
