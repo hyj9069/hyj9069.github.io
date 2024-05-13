@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h1 {
+      display: flex;
+      justify-content: center;
+    }
+
+    .ex1 {
+      display: flex;
+      justify-content: center;
+    }
+
+    .ex2 {
+      display: table;
+      width: 300px;
+    }
+
+    .ex2 h2 {
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+      background-color: cadetblue;
+    }
+
+    .container {
+      overflow: hidden;
+    }
+
+    .box1 {
+      display: block;
+    }
+
+    .box2 {
+      display: inline-block;
+      margin: 20px;
+      padding: 20px;
+    }
+
+    .box3 {
+      display: inline;
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid #000;
+    }
+
+    .span {
+      border: 1px solid #000;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>제목입니다</h1>
+  <div class="ex1">
+    <h2>내용입니다</h2>
+  </div>
+  <div class="ex2">
+    <h2>내용2입니다</h2>
+  </div>
+  <div class="container">
+    <div class="box1" style="background-color: aqua;">Box 1</div>
+    <div class="box2" style="background-color: bisque;">
+      Box 2
+      <span>inline</span>
+    </div>
+    <div class="box3" style="background-color: pink">Box 3
+      <span>inline</span>
+    </div>
+  </div>
+</body>
+<span class="span">span</span>
+
+</html>
