@@ -160,22 +160,18 @@ $(document).ready(function () {
       });
       a1.addLabel("a").to(".intro-main .title span:nth-of-type(even)", { xPercent: 100 }, "a").to(".intro-main .title span:nth-of-type(odd)", { xPercent: -100 }, "a");
       a1.scrollTrigger.refresh();
-      // intro  main 백그라운드 색상변경
-      gsap.timeline({
+      // intro 백그라운드 색상변경
+      const introBg = ".intro";
+      gsap.to(introBg, {
+        background: "#fff",
         scrollTrigger: {
           trigger: ".intro-sec",
           start: "top 80%",
-          toggleClass: { targets: ".intro-main", className: "active" },
+          end: "top 0",
+          scrub: true,
         },
       });
-      // intro sec 백그라운드 색상변경
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: ".intro-sec",
-          start: "top 80%",
-          toggleClass: { targets: ".intro-sec", className: "active" },
-        },
-      });
+      // about 텍스트
       const about = gsap.timeline({
         scrollTrigger: {
           trigger: ".about",
@@ -208,12 +204,15 @@ $(document).ready(function () {
           className: "txt-motion", // 토글할 클래스 이름
         });
       //project 배경
-      gsap.timeline({
+      const projBg = ".projects";
+      gsap.to(projBg, {
+        background: "#272829",
         scrollTrigger: {
-          trigger: ".projects .toy-content-wrap",
-          start: "top bottom",
-          end: "bottom 0%",
-          toggleClass: { targets: ".projects", className: "active" },
+          trigger: ".toy-proj",
+          start: "top top",
+          end: "top 30%",
+          // markers: true,
+          scrub: true,
         },
       });
       /////web-proj items////
