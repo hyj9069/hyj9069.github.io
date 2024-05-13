@@ -804,7 +804,7 @@ section.article {
   display: flex;
   gap: 80px;
   margin: 0 auto;
-  border: 1px solid var(--main-color);
+  border-bottom: 1px solid var(--main-color);
   position: relative;
   top: 0;
   right: 0;
