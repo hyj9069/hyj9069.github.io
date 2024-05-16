@@ -5,9 +5,14 @@ $(function () {
   let aboutSwiper;
   let collecSwiper;
 
-  nav.hover(function () {
-    header.toggleClass("active");
-  });
+  nav.hover(
+    function () {
+      header.toggleClass("active");
+    },
+    function () {
+      header.removeClass("active");
+    }
+  );
 
   $(".aside_wrap").hide();
   $(".btn_allmenu_open").click(() => {

@@ -227,7 +227,6 @@ section.goal {
   height: 15px;
   background-color: #fff;
   pointer-events: none;
-  opacity: 0.6;
   border-radius: 100px;
   opacity: 1;
 }

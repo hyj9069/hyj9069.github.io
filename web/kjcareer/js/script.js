@@ -41,4 +41,13 @@ $(function () {
       $(this).addClass("btn_view");
     }
   );
+
+  $("nav").hover(
+    function () {
+      $(".header_inner").addClass("active");
+    },
+    function () {
+      $(".header_inner").removeClass("active");
+    }
+  );
 });
