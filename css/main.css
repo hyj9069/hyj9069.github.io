@@ -256,7 +256,7 @@ section.intro-sec {
 .intro-sec .flow-txt {
   overflow: hidden;
   position: absolute;
-  top: 47vw;
+  top: 180px;
   right: 0;
   left: 0;
   white-space: nowrap;
@@ -1354,7 +1354,7 @@ section.contact {
   .projects .web-proj .txt-wrap p {
     font-size: 1.3rem;
   }
-  .projects .web-proj .btn-wrap button {
+  .projects .web-proj .btn-wrap a {
     font-size: 1.1rem;
   }
   /* toy */
@@ -1387,8 +1387,8 @@ section.contact {
   .cursor {
     display: none;
   }
-  .projects .web-proj .btn-wrap button {
-    font-size: 1.1rem;
+  section.intro-sec {
+    padding-top: 40%;
   }
   /* graphic */
   section.graphic {
@@ -1419,15 +1419,14 @@ section.contact {
   .goal h3 {
     font-size: 6rem;
   }
-  section.intro-sec {
-    padding-top: 200px;
-  }
   .intro-sec .flow-txt {
     top: 210px;
   }
-  .intro-sec .flow-txt span,
-  .intro-sec h3 {
+  .intro-sec .flow-txt span {
     font-size: 12rem;
+  }
+  .intro-sec h3 {
+    font-size: 10rem;
   }
   /* about */
   .about .content-left {
@@ -1542,8 +1541,7 @@ section.contact {
     padding-top: 40px;
   }
   .about h3,
-  .graphic h3,
-  .goal h3 {
+  .graphic h3 {
     top: 40px;
   }
   .about h3,
@@ -1551,7 +1549,7 @@ section.contact {
   .graphic h3,
   .article h3,
   .goal h3 {
-    font-size: 5rem;
+    font-size: 4rem;
   }
   #header a {
     font-size: 14px;
@@ -1600,20 +1598,18 @@ section.contact {
     height: 10px;
   }
   /* intro-sec */
-  section.intro-sec {
-    padding-top: 40%;
-  }
-  .intro-sec .slide-box {
-    top: 180px;
-  }
   .intro-sec h3 .word:first-of-type {
     margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .intro-sec .flow-txt {
+    top: 47vw;
   }
   .intro-sec .flow-txt span {
     font-size: 9rem;
   }
   .intro-sec h3 {
-    font-size: 7rem;
+    font-size: 6rem;
   }
   .intro-sec .split .line {
     display: flex !important;
@@ -1658,7 +1654,7 @@ section.contact {
     font-size: 1.3rem;
   }
   .about .content-left .txt-wrap span:last-of-type {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   .about .content-right {
     gap: 0;
@@ -1681,7 +1677,7 @@ section.contact {
   }
   .about .content-right span,
   .about .content-right p {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   .about .content-right .education > div:not(:last-child) {
     margin-bottom: 10px;
@@ -1726,8 +1722,9 @@ section.contact {
   .projects .web-proj .txt-wrap p {
     font-size: 1.2rem;
   }
-  .projects .web-proj .btn-wrap button {
-    margin-right: 3px;
+  .projects .web-proj .btn-wrap a {
+    padding: 5px 8px;
+    font-size: 10px;
   }
   .projects .toy-proj h4 {
     font-size: 8rem;
@@ -1775,6 +1772,10 @@ section.contact {
   .pop-up button::after {
     height: 20px;
   }
+  /* goal */
+  .goal h3 {
+    top: 100px;
+  }
   /* article */
   section.article {
     gap: 0;
@@ -1783,10 +1784,11 @@ section.contact {
   }
   .article .content-left {
     gap: 0;
-    padding: 20px 0;
+    padding: 30px 0;
     width: 100%;
     min-height: auto;
     max-height: auto;
+    border-top: 1px solid var(--point-color);
   }
   section.article h3 {
     font-size: 4rem;

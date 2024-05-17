@@ -204,13 +204,23 @@ $(document).ready(function () {
           className: "txt-motion",
         });
       //project 배경
+      // const projBg = ".projects";
+      // gsap.to(projBg, {
+      //   background: "#272829",
+      //   scrollTrigger: {
+      //     trigger: ".toy-proj",
+      //     start: "top top",
+      //     end: "top 30%",
+      //     markers: true,
+      //     scrub: true,
+      //   },
+      // });
       const projBg = ".projects";
       gsap.to(projBg, {
         background: "#272829",
         scrollTrigger: {
-          trigger: ".toy-proj",
-          start: "top top",
-          end: "top 30%",
+          trigger: ".web-proj .content-wrap",
+          start: "bottom top", // .content-wrap의 상단이 화면의 중앙에 도달하면 시작
           // markers: true,
           scrub: true,
         },
