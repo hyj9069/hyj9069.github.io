@@ -78,72 +78,74 @@ $(document).ready(function () {
     });
   });
 
-  //cursor
-  let cursor = document.querySelector(".cursor");
-  let cursorScale = document.querySelectorAll(".cursor-scale");
-  let imgTxt = document.querySelector(".img-cursor-txt");
-  let mouseX = 0;
-  let mouseY = 0;
-  gsap.to({}, 0.016, {
-    repeat: -1,
-    onRepeat: function () {
-      gsap.set(cursor, {
-        css: {
-          left: mouseX,
-          top: mouseY,
-        },
-      });
-    },
-  });
-  window.addEventListener("mousemove", function (e) {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-  });
-  cursorScale.forEach((link) => {
-    link.addEventListener("mouseleave", () => {
-      cursor.classList.remove("grow");
-      cursor.classList.remove("grow-small");
-      cursor.classList.remove("h2-cursor");
-      cursor.classList.remove("img-cursor");
-      cursor.classList.remove("btn-cursor");
-    });
-  });
-  cursorScale.forEach((link) => {
-    link.addEventListener("mousemove", () => {
-      cursor.classList.add("grow");
-
-      if (link.classList.contains("small")) {
-        cursor.classList.remove("grow");
-        cursor.classList.add("grow-small");
-      } else if (link.classList.contains("h2-hover")) {
-        cursor.classList.remove("grow");
-        cursor.classList.remove("grow-small");
-        cursor.classList.add("h2-cursor");
-      } else if (link.classList.contains("img-hover")) {
-        cursor.classList.remove("grow");
-        cursor.classList.remove("grow-small");
-        cursor.classList.remove("h2-cursor");
-        cursor.classList.add("img-cursor");
-      } else if (link.classList.contains("btn-hover")) {
-        cursor.classList.remove("grow");
-        cursor.classList.remove("grow-small");
-        cursor.classList.remove("h2-cursor");
-        cursor.classList.remove("img-cursor");
-        cursor.classList.add("btn-cursor");
-      }
-
-      if (cursor.classList.contains("img-cursor")) {
-        imgTxt.style.display = "block";
-      } else {
-        imgTxt.style.display = "none";
-      }
-    });
-  });
   //////////
   ScrollTrigger.matchMedia({
     // 해상도 별 스크롤 트리거 디테일 수정
     // desktop
-    "(min-width: 350px)": function () {
+    "(min-width:1024px)": function () {
+      //cursor
+      let cursor = document.querySelector(".cursor");
+      let cursorScale = document.querySelectorAll(".cursor-scale");
+      let imgTxt = document.querySelector(".img-cursor-txt");
+      let mouseX = 0;
+      let mouseY = 0;
+      gsap.to({}, 0.016, {
+        repeat: -1,
+        onRepeat: function () {
+          gsap.set(cursor, {
+            css: {
+              left: mouseX,
+              top: mouseY,
+            },
+          });
+        },
+      });
+      window.addEventListener("mousemove", function (e) {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+      });
+      cursorScale.forEach((link) => {
+        link.addEventListener("mouseleave", () => {
+          cursor.classList.remove("grow");
+          cursor.classList.remove("grow-small");
+          cursor.classList.remove("h2-cursor");
+          cursor.classList.remove("img-cursor");
+          cursor.classList.remove("btn-cursor");
+        });
+      });
+      cursorScale.forEach((link) => {
+        link.addEventListener("mousemove", () => {
+          cursor.classList.add("grow");
+
+          if (link.classList.contains("small")) {
+            cursor.classList.remove("grow");
+            cursor.classList.add("grow-small");
+          } else if (link.classList.contains("h2-hover")) {
+            cursor.classList.remove("grow");
+            cursor.classList.remove("grow-small");
+            cursor.classList.add("h2-cursor");
+          } else if (link.classList.contains("img-hover")) {
+            cursor.classList.remove("grow");
+            cursor.classList.remove("grow-small");
+            cursor.classList.remove("h2-cursor");
+            cursor.classList.add("img-cursor");
+          } else if (link.classList.contains("btn-hover")) {
+            cursor.classList.remove("grow");
+            cursor.classList.remove("grow-small");
+            cursor.classList.remove("h2-cursor");
+            cursor.classList.remove("img-cursor");
+            cursor.classList.add("btn-cursor");
+          }
+
+          if (cursor.classList.contains("img-cursor")) {
+            imgTxt.style.display = "block";
+          } else {
+            imgTxt.style.display = "none";
+          }
+        });
+      });
+    },
+    "(min-width: 370px)": function () {
       //intro-main 텍스트
       // gsap.from(".intro-main .title span:nth-of-type(odd)", { xPercent: -100 });
       // gsap.from(".intro-main .title span:nth-of-type(even)", { xPercent: 100 });
