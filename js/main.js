@@ -143,7 +143,7 @@ $(document).ready(function () {
   ScrollTrigger.matchMedia({
     // 해상도 별 스크롤 트리거 디테일 수정
     // desktop
-    "(min-width: 480px)": function () {
+    "(min-width: 350px)": function () {
       //intro-main 텍스트
       // gsap.from(".intro-main .title span:nth-of-type(odd)", { xPercent: -100 });
       // gsap.from(".intro-main .title span:nth-of-type(even)", { xPercent: 100 });
@@ -194,14 +194,12 @@ $(document).ready(function () {
         .to(
           ".about .content-wrap .txt-slide",
           {
-            // 다른 타겟을 선택하여 시간차로 효과를 주고 싶은 경우
-            className: "txt-motion", // 토글할 클래스 이름
+            className: "txt-motion",
           },
           "label"
-        ) // 시간 차를 주기 위해 - 값 사용
+        )
         .to(".about .content-right .slide-wrap", {
-          // 다른 타겟을 선택하여 시간차로 효과를 주고 싶은 경우
-          className: "txt-motion", // 토글할 클래스 이름
+          className: "txt-motion",
         });
       //project 배경
       const projBg = ".projects";
@@ -215,7 +213,7 @@ $(document).ready(function () {
           scrub: true,
         },
       });
-      /////web-proj items////
+      //web-proj items//
       const projItems = gsap.utils.toArray(".web-proj .content-wrap .item");
 
       function animateItems() {

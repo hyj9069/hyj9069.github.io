@@ -1101,7 +1101,7 @@ main .business4 .btns .btn_bg2 {
   main .main_visual_wrap .swiper-button-next {
     right: 0;
   }
-  /*  */
+  /* business2 */
   main .business2 .inner::before {
     top: auto;
     bottom: 0;
@@ -1136,7 +1136,7 @@ main .business4 .btns .btn_bg2 {
     font-size: 28px;
   }
 }
-@media screen and (max-width: 510px) {
+@media screen and (max-width: 480px) {
   /*480이하*/
   body::before {
     background: fuchsia;
