@@ -177,9 +177,9 @@ section.goal {
 }
 /* intro-main */
 .container .intro-main {
-  overflow: hidden;
   display: flex;
   align-items: center;
+  overflow: hidden;
   /* background: var(--main-color);
   transition: background 0.5s; */
 }
@@ -188,18 +188,18 @@ section.goal {
   transition: background 0.5s;
 } */
 .intro-main .title {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   position: relative;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 .intro-main .title span {
   display: block;
   z-index: 99;
   font-size: 13vw;
-  white-space: nowrap;
   color: var(--point-color) !important;
+  white-space: nowrap;
 }
 /* .intro-main .title span:nth-of-type(1) {
   top: 10%;
@@ -256,7 +256,7 @@ section.intro-sec {
 .intro-sec .flow-txt {
   overflow: hidden;
   position: absolute;
-  top: 186px;
+  top: 47vw;
   right: 0;
   left: 0;
   white-space: nowrap;
@@ -373,8 +373,8 @@ section.about {
 .about .content-left .txt-wrap span:last-of-type {
   margin-top: 5px;
   font-size: 1.2rem;
-  color: #999;
   font-weight: 500;
+  color: #999;
 }
 .about .content-right {
   display: flex;
@@ -419,8 +419,8 @@ section.about {
 }
 .about .content-right .education > div {
   display: flex;
-  align-items: baseline;
   gap: 10px;
+  align-items: baseline;
 }
 .about .content-right .education > div:not(:last-child) {
   margin-bottom: 20px;
@@ -638,12 +638,12 @@ section.projects.active {
 }
 .projects .toy-content-wrap .bg-box .txt {
   display: flex;
-  flex-direction: column;
+  gap: 5px;
   align-items: baseline;
+  flex-direction: column;
   position: absolute;
   bottom: 12px;
   left: 28px;
-  gap: 5px;
 }
 .projects .toy-content-wrap .txt strong {
   margin-right: 10px;
@@ -696,8 +696,8 @@ section.projects.active {
 /* graphic */
 .graphic {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   position: relative;
   background: var(--main-color);
 }
@@ -711,11 +711,11 @@ section.projects.active {
   width: 65%;
 }
 .graphic .swiper {
+  margin: 0;
   padding: 0 90px;
   overflow: hidden;
   width: 100%;
   box-sizing: content-box;
-  margin: 0;
 }
 .graphic .img-content {
   /* box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1); */
@@ -901,8 +901,8 @@ section.article {
   width: 0;
   height: 5px;
   background: #d8d9da;
-  opacity: 0.4;
   content: "";
+  opacity: 0.4;
 }
 .article .content-right li a:hover .txt-box strong::after {
   width: 100%;
@@ -1606,9 +1606,6 @@ section.contact {
   .intro-sec h3 .word:first-of-type {
     margin-right: 0;
   }
-  .intro-sec .flow-txt {
-    top: 35%;
-  }
   .intro-sec .flow-txt span {
     font-size: 9rem;
   }
@@ -1628,7 +1625,7 @@ section.contact {
     line-height: 2rem;
   }
   .intro-sec .scroll-down {
-    bottom: 15px;
+    bottom: 25px;
   }
   .intro-sec .scroll-down span {
     font-size: 1.3rem;
@@ -1687,8 +1684,8 @@ section.contact {
     margin-bottom: 10px;
   }
   .about .content-right .skills img {
-    height: 20px;
     margin-right: 7px;
+    height: 20px;
   }
   /* projects */
   section.projects {
@@ -1762,8 +1759,8 @@ section.contact {
   }
   /* graphic */
   .graphic .swiper {
-    width: 50%;
     padding: 0;
+    width: 50%;
   }
   .pop-up button {
     top: 20%;
@@ -1777,14 +1774,14 @@ section.contact {
   }
   /* article */
   section.article {
-    flex-direction: column;
     gap: 0;
+    flex-direction: column;
     border-bottom: none;
   }
   .article .content-left {
-    width: 100%;
-    padding: 20px 0;
     gap: 0;
+    padding: 20px 0;
+    width: 100%;
     min-height: auto;
     max-height: auto;
   }
@@ -1796,8 +1793,8 @@ section.contact {
     font-size: 1rem;
   }
   .article .content-right {
-    width: 100%;
     overflow: hidden;
+    width: 100%;
   }
   .article .content-right ul {
     padding: 80px 0;
