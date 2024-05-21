@@ -204,27 +204,27 @@ $(document).ready(function () {
           className: "txt-motion",
         });
       //project 배경
-      // const projBg = ".projects";
-      // gsap.to(projBg, {
-      //   background: "#272829",
-      //   scrollTrigger: {
-      //     trigger: ".toy-proj",
-      //     start: "top top",
-      //     end: "top 30%",
-      //     markers: true,
-      //     scrub: true,
-      //   },
-      // });
       const projBg = ".projects";
       gsap.to(projBg, {
         background: "#272829",
         scrollTrigger: {
-          trigger: ".web-proj .content-wrap",
-          start: "bottom top", // .content-wrap의 상단이 화면의 중앙에 도달하면 시작
-          // markers: true,
+          trigger: ".toy-proj",
+          start: "top top",
+          end: "top 30%",
+          markers: true,
           scrub: true,
         },
       });
+      // const projBg = ".projects";
+      // gsap.to(projBg, {
+      //   background: "#272829",
+      //   scrollTrigger: {
+      //     trigger: ".web-proj .content-wrap",
+      //     start: "bottom top", // .content-wrap의 상단이 화면의 중앙에 도달하면 시작
+      //     markers: true,
+      //     scrub: true,
+      //   },
+      // });
       //web-proj items//
       const projItems = gsap.utils.toArray(".web-proj .content-wrap .item");
 
@@ -260,6 +260,7 @@ $(document).ready(function () {
           start: "top bottom",
           end: "bottom 80%",
           scrub: true,
+          // markers: true,
         },
       });
 
@@ -338,7 +339,7 @@ $(document).ready(function () {
   });
   // 그래픽
   let imgLength = $(".graphic .img-content").length;
-  console.log(imgLength);
+  // console.log(imgLength);
   let graphicImg = $(".graphic .img-content");
   let popUp = $(".pop-up");
   let popImg = $(".pop-up .pop-img");
