@@ -208,9 +208,10 @@ $(document).ready(function () {
       gsap.to(projBg, {
         background: "#272829",
         scrollTrigger: {
-          trigger: ".toy-proj",
-          start: "top top",
+          trigger: ".projects .toy-proj",
+          start: "top 0%",
           end: "top 30%",
+          markers: true,
           scrub: true,
         },
       });
