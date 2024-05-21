@@ -211,7 +211,6 @@ $(document).ready(function () {
           trigger: ".toy-proj",
           start: "top top",
           end: "top 30%",
-          markers: true,
           scrub: true,
         },
       });
