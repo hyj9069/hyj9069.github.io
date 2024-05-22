@@ -1,4 +1,6 @@
 $(document).ready(function () {
+  const web_proj = $(".web-proj").height();
+  console.log("웹 :", web_proj);
   gsap.registerPlugin(ScrollTrigger);
 
   // wep-project isotope
@@ -79,6 +81,7 @@ $(document).ready(function () {
   });
 
   //////////
+
   ScrollTrigger.matchMedia({
     // 해상도 별 스크롤 트리거 디테일 수정
     // desktop
@@ -204,6 +207,8 @@ $(document).ready(function () {
           className: "txt-motion",
         });
       //project 배경
+      // const web_proj = $(".web-proj").height();
+      // console.log("웹 :", web_proj);
       const projBg = ".projects";
       gsap.to(projBg, {
         background: "#272829",
@@ -211,7 +216,7 @@ $(document).ready(function () {
           trigger: ".projects .toy-proj",
           start: "top 0%",
           end: "top 30%",
-          markers: true,
+          // markers: true,
           scrub: true,
         },
       });
@@ -225,6 +230,7 @@ $(document).ready(function () {
       //     scrub: true,
       //   },
       // });
+
       //web-proj items//
       const projItems = gsap.utils.toArray(".web-proj .content-wrap .item");
 
@@ -293,9 +299,10 @@ $(document).ready(function () {
               animateHide(item);
             },
             trigger: item,
-            start: "top 80%",
-            end: "end bottom",
-            toggleActions: "play none none reverse",
+            start: "top 90%",
+            end: "bottom 100%",
+            // toggleActions: "play non none reverse",
+            // markers: true,
           });
       });
       // toy-item iframe pop-up
